@@ -1,0 +1,72 @@
+---
+title: Adam Visokay's Personal Website
+description: Adam Visokay's Personal Website
+---
+
+<!-- This is the main page of the website -->
+<div class="jumbotron mb-0">
+    <div class="container">
+        <div class="row">
+            <!-- the left column with image and personal info -->
+            <div class="col-md-6 text-center">
+                <img src="assets/media/visokay_portrait.jpg" id="headshot" style="max-width:16rem;" id="left" alt=""
+                    class="img-thumbnail img-fluid">
+                <h1 class="mb-2 mt-2">Hello, I'm Adam Visokay</h1>
+                <p class="text-left">
+                    I'm a computational social scientist studying machine learning, NLP, and network methods at 
+                    the <a href="https://soc.washington.edu/people/adam-visokay">University of Washington</a>. 
+                    I focus on developing interdisciplinary statistical methodologies with applications in sociology, 
+                    computer science, economics, public health, and statistics. My substantive interests lie at the 
+                    intersection of monetary policy and digital finance.
+                </p>
+            </div>
+            <!-- the right column with education, industry experience, 
+                and languages. (d-flex flex-column) makes it so the
+                vertical content spacing changes with height of the
+                left column (just makes the vertical spacing nice) -->
+            <div class="col-md-6 d-flex flex-column">
+                <div class="my-auto">
+                    <h2>
+                        Education
+                    </h2>
+                    <p>
+                        {% for item in site.data.edu %}
+                    <div class="">{{item.name}}</div>
+                    {% endfor %}
+                    </p>
+                </div>
+                <div class="my-auto">
+                    <h2 class="">Research Experience</h2>
+                    <p>
+                        {% for item in site.data.ind_exp %}
+                    <div>{{item.name}}</div>
+                    {% endfor %}
+                    </p>
+                </div>
+                <div class="my-auto">
+                    <h2 class="">Languages</h2>
+                    <p>
+                        {% for item in site.data.lang %}
+                    <div>{{item.name}}: {{item.values}}</div>
+                    {% endfor %}
+
+                    (decreasing order of fluency)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ignore -->
+<script>
+    // $(document).ready(function () {
+    //     // $("#right").toggle("slide");
+    //     // $("#left").toggle("slide");
+    //     $( "#headshot" ).slideToggle("slow");
+
+    // });
+    // $( "#headshot" ).slideToggle("slow");
+    // $("#headshot").animate({left:'slide'},350);
+    // $('#headshot').toggle("slide", { direction: "left"}, -1000);
+</script>
