@@ -1,2 +1,3 @@
 # Adam Visokay's Personal Website
-A modular, responsive site written with Jekyll
+I made this website to share my research interests, past and current work, and a bit about what I'm 
+up to outside of the classroom/office.
