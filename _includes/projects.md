@@ -11,7 +11,7 @@
     </p>
 </div></h1>
 <br>
-<embed src="/assets/rrds.png" width="800px" height="500px" />
+<embed src="/assets/rrds.png" width="800px" height="550px" />
 <br>
 
 <h1><div class="container">
@@ -19,7 +19,7 @@
     </p>
 </div></h1>
 <br>
-<embed src="/assets/super_spikes_did.png" width="800px" height="400px" />
+<embed src="/assets/super_spikes_did.png" width="800px" height="450px" />
 <br>
 
 
