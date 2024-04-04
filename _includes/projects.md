@@ -30,7 +30,7 @@
     </p>
 </div></h1>
 <br>
-<embed src="/assets/ard.png" width="800px" height="550px" />
+<embed src="/assets/ard.png" width="800px" height="800px" />
 <br>
 
 <br>
