@@ -26,11 +26,11 @@
 <br>
 
 <h1><div class="container">
-    <p><a href="https://avisokay.shinyapps.io/viz_presentation_slides/">Aggregated Relational Data Primer</a>
+    <p><a href="https://avisokay.shinyapps.io/uw_ard_viz/">Aggregated Relational Data Primer</a>
     </p>
 </div></h1>
 <br>
-<embed src="/assets/ard.png" width="800px" height="850px" />
+<embed src="/assets/ard.png" width="800px" height="875px" />
 <br>
 
 <br>
