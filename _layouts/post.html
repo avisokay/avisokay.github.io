@@ -10,3 +10,9 @@ layout: default
     {{content}}
     <br>
 </div>
+
+{% if site.google_scholar %}
+  <a href="{{ site.google_scholar }}" target="_blank">
+    <img src="{{ '/assets/icons/google-scholar-icon.png' | relative_url }}" alt="Google Scholar" style="width:24px; height:24px;" />
+  </a>
+{% endif %}
