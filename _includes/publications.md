@@ -1,4 +1,4 @@
--  [**From Narratives to Numbers: Valid Inference Using Language Model Predictions from Verbal Autopsy Narratives**](https://arxiv.org/abs/2404.02438) (COLM 2024) <br />
+-  [**From Narratives to Numbers: Valid Inference Using Language Model Predictions from Verbal Autopsy Narratives**](https://openreview.net/forum?id=QbCHlIqbDJ#discussion) (COLM 2024) <br />
 
 -  [**GPT Deciphering Fedspeak: Quantifying Dissent Among Hawks and Doves**](https://aclanthology.org/2023.findings-emnlp.434.pdf) (EMNLP-Findings 2023) <br /> 
 
