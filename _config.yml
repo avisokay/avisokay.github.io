@@ -17,6 +17,8 @@ avatar:  ""
 email: avisokay at uw dot edu
 github: https://github.com/avisokay
 linkedin: https://www.linkedin.com/in/avisokay/
+google_scholar: https://scholar.google.com/citations?user=V_5uLBMAAAAJ&hl=en&oi=ao
+
 
 plugins:
   - jekyll-feed
