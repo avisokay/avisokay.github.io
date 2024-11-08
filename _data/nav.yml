@@ -1,7 +1,5 @@
 - name: Home
-  link: /
-# - name: Projects
-#   link: /projects.html
+  link: /index.html
 - name: CV
   link: /cv.html
 - name: Publications
