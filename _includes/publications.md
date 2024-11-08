@@ -1,7 +1,6 @@
 <body>
     <div class="container">
-        <h1>📚 Publications</h1>
-        Publications listed in reverse chronological order.
+        <h1></h1>
         <article>
             <br>
             <div class="publications">
@@ -13,7 +12,7 @@
                             <div class="col-sm-2">
                                 <figure>
                                     <picture>
-                                        <source srcset="/assets/img/publication_preview/va-480.webp 480w, /assets/img/publication_preview/va-800.webp 800w, /assets/img/publication_preview/va-1400.webp 1400w" sizes="200px" type="image/webp">
+                                        <source srcset="/assets/img/publication_preview/va.webp 480w, /assets/img/publication_preview/va.webp 800w, /assets/img/publication_preview/va.webp 1400w" sizes="200px" type="image/webp">
                                         <img src="/assets/img/publication_preview/va.png" class="img-fluid rounded" alt="va.png">
                                     </picture>
                                 </figure>
