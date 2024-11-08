@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+<br>
+
 My passion for cooking has existed for nearly as long as my passion for eating. Sourdough bread making in particular has become a cherished weekly routine of mine.
 <br>
 <br>

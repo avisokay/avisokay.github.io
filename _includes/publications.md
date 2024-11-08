@@ -167,13 +167,7 @@
             </div>
         </article>
         
-    </div>
-    <footer class="fixed-bottom bg-light text-center py-3">
-        <div class="container">
-            © Copyright 2024 Adam Visokay. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
 
