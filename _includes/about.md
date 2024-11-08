@@ -1,4 +1,3 @@
-</head>
 <body>
     <div class="container">
         <h1>🏃🏽 About</h1>
