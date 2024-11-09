@@ -67,6 +67,14 @@ description: Adam Visokay's Personal Website
                     (decreasing order of fluency)
                     </p>
                 </div>
+                <div class="my-auto">
+                    <h2 class="">📰 News</h2>
+                    <p>
+                        {% for item in site.data.news %}
+                    <div>{{item.name}}: {{item.values}}</div>
+                    {% endfor %}
+                    </p>
+                </div>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <body>
     <div class="container">
-        <h1>🏃🏽 About</h1>
+        <h1></h1>
         <br>
         <br>
         My passion for cooking has existed for nearly as long as my passion for eating. Sourdough bread making in particular has become a cherished weekly routine of mine.
