@@ -105,7 +105,6 @@
                             <div class="col-sm-2">
                                 <figure>
                                     <picture>
-                                        <source srcset="/assets/img/publication_preview/super_spikes_did-480.webp 480w, /assets/img/publication_preview/super_spikes_did-800.webp 800w, /assets/img/publication_preview/super_spikes_did-1400.webp 1400w" sizes="200px" type="image/webp">
                                         <img src="/assets/img/publication_preview/super_spikes_did.png" class="img-fluid rounded" alt="super_spikes_did.png">
                                     </picture>
                                 </figure>
@@ -148,9 +147,5 @@
                 </ol>
             </div>
         </article>
-    </body>
-</html>
-
-
 
 
