@@ -12,8 +12,8 @@
                             <div class="col-sm-2">
                                 <figure>
                                     <picture>
-                                        <source srcset="/assets/img/publication_preview/va.webp 480w, /assets/img/publication_preview/va.webp 800w, /assets/img/publication_preview/va.webp 1400w" sizes="200px" type="image/webp">
-                                        <img src="/assets/img/publication_preview/va.png" class="img-fluid rounded" alt="va.png">
+                                        <source srcset="/assets/img/publication_preview/va-480.png 480w, /assets/img/publication_preview/va-800.png 800w, /assets/img/publication_preview/va-1400.png 1400w" sizes="200px" type="image/png">
+        <img src="/assets/img/publication_preview/va.png" class="img-fluid rounded" alt="va.png">
                                     </picture>
                                 </figure>
                             </div>
