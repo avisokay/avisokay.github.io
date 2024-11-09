@@ -35,7 +35,7 @@ description: Adam Visokay's Personal Website
                 </p>
             </div>
             <!-- the right column with education, industry experience, 
-                and languages. (d-flex flex-column) makes it so the
+                languages, and news. (d-flex flex-column) makes it so the
                 vertical content spacing changes with height of the
                 left column (just makes the vertical spacing nice) -->
             <div class="col-md-6 d-flex flex-column">
@@ -55,16 +55,6 @@ description: Adam Visokay's Personal Website
                         {% for item in site.data.ind_exp %}
                     <div>{{item.name}}</div>
                     {% endfor %}
-                    </p>
-                </div>
-                <div class="my-auto">
-                    <h2 class="">🤖 Languages</h2>
-                    <p>
-                        {% for item in site.data.lang %}
-                    <div>{{item.name}}: {{item.values}}</div>
-                    {% endfor %}
-
-                    (decreasing order of fluency)
                     </p>
                 </div>
                 <div class="my-auto">
