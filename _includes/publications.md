@@ -29,7 +29,7 @@
                                 <a href="/assets/visokay2024va.pdf" class="btn btn-sm btn-outline-primary">pdf</a>
                                 <a href="https://github.com/avisokay/va_nlp/" class="btn btn-sm btn-outline-primary" target="_blank">code</a>
                                 <a href="/assets/visokay2024va_poster.pdf" class="btn btn-sm btn-outline-primary">poster</a>
-                                <a href="/assets/visokay2024va_slides.pdf" class="btn btn-sm btn-outline-primary">slides</a>
+                                <a href="/assets/escience_IPD.pdf" class="btn btn-sm btn-outline-primary">slides</a>
                             </div>
                         </div>
                     </div>
