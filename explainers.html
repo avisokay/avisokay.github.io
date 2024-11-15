@@ -12,12 +12,13 @@
 <!-- This is the main page of the website -->
 
 <div class="container">
-    <h1>📚 Publications</h1>
-    Publications listed in reverse chronological order.
+    <h1>🎨 Explainers</h1>
+    I'm a visual learner. I love using whiteboards to think through problems and wanted to curate
+    an online space where I share simplified explanations of some of my big ideas. Other peoples ideas too!
     <div class="row">
         <div class="col">
             <!-- via https://stackoverflow.com/questions/41966638/jekyll-on-github-pages-include-markdown-in-another-markdown-file -->
-            {% capture my_include %}{% include publications.md %}{% endcapture %}
+            {% capture my_include %}{% include explainers.md %}{% endcapture %}
             {{ my_include | markdownify }}
         </div>
     </div>

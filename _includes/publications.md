@@ -110,7 +110,7 @@
                         </div>
                     </div>
                 </ol>
-                <h2 class="bibliography"></h2>
+                <!-- <h2 class="bibliography"></h2>
                 <ol class="bibliography">
                     <div class="row">
                         <div class="col-sm-2">
@@ -130,7 +130,7 @@
                             </div>
                         </div>
                     </div>
-                </ol>
+                </ol> -->
             </div>
         </article>
 
