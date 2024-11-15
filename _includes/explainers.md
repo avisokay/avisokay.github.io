@@ -21,8 +21,8 @@
         <h1></h1>
         <article>
             <br>
-            <div class="explainers mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col explainer">
+            <div class="row explainers">
+                <div class="col-md-4 explainer">
                     <figure>
                         <a href="https://avisokay.shinyapps.io/uw_ard_viz/" target="_blank">
                             <picture>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <!-- Add more explainers here -->
-                <div class="mdl-cell mdl-cell--4-col explainer">
+                <div class="col-md-4 explainer">
                     <figure>
                         <a href="https://avisokay.shinyapps.io/uw_ard_viz/" target="_blank">
                             <picture>
@@ -52,9 +52,8 @@
                     <div class="snippet">
                         An introduction to Aggregated Relational Data (ARD) - <em>How many people with trait X do you know?</em>
                     </div>
-                </div>                    <!-- Another explainer -->
                 </div>
-                <div class="mdl-cell mdl-cell--4-col explainer">
+                <div class="col-md-4 explainer">
                     <figure>
                         <a href="https://avisokay.shinyapps.io/uw_ard_viz/" target="_blank">
                             <picture>
@@ -68,7 +67,7 @@
                     <div class="snippet">
                         An introduction to Aggregated Relational Data (ARD) - <em>How many people with trait X do you know?</em>
                     </div>
-                </div> 
+                </div>
             </div>
         </article>
     </div>
