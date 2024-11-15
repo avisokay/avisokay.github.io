@@ -11,15 +11,39 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 <!-- This is the main page of the website -->
 
-<div class="container">
-    <h1>🎨 Explainers</h1>
-    I'm a visual learner. I love using whiteboards to think through problems and wanted to curate
-    an online space where I share simplified explanations of some of my big ideas. Other peoples ideas too!
-    <div class="row">
-        <div class="col">
-            <!-- via https://stackoverflow.com/questions/41966638/jekyll-on-github-pages-include-markdown-in-another-markdown-file -->
-            {% capture my_include %}{% include explainers.md %}{% endcapture %}
-            {{ my_include | markdownify }}
+
+<div class="jumbotron mb-0">
+    <div class="container">
+        <div class="row">
+            <!-- the left column with image and personal info -->
+            <div class="col-md-6 text-left">
+                <h1 class="mb-2 mt-2">🎨 Explainers</h1>
+                <p class="text-left">
+                    <br>
+                    <br>
+                    I'm a visual learner. I love using whiteboards to think through problems and 
+                    wanted to curate an online space where I share simplified explanations of some 
+                    of my big ideas. Other peoples ideas, too!
+                </p>
+            </div>
+            <!-- the right column with education, industry experience, 
+                languages, and news. (d-flex flex-column) makes it so the
+                vertical content spacing changes with height of the
+                left column (just makes the vertical spacing nice) -->
+            <div class="col-md-6 d-flex flex-column">
+                <div class="my-auto">
+                    <img src="assets/img/rhino.png" id="rhino" style="max-width:16rem;" id="left" alt=""
+                    class="img-fluid">
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <!-- via https://stackoverflow.com/questions/41966638/jekyll-on-github-pages-include-markdown-in-another-markdown-file -->
+        {% capture my_include %}{% include explanations.md %}{% endcapture %}
+        {{ my_include | markdownify }}
     </div>
 </div>
