@@ -30,11 +30,3 @@
         </article>
     </div>
 </body>
-
-
-
-
-
-                            <div class="links">
-                                <a href="https://avisokay.shinyapps.io/uw_ard_viz/" class="btn btn-sm btn-outline-primary" target="_blank">html</a>
-                            </div>
