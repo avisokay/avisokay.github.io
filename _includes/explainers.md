@@ -7,10 +7,10 @@
         <br>
         <div class="row explainers">
             <div class="col-md-4 explainer">
-                <figure>
+                <figure class="d-flex justify-content-center">
                     <a href="https://avisokay.shinyapps.io/uw_ard_viz/" target="_blank">
                         <picture>
-                            <img src="/assets/img/publication_preview/ard.png" class="img-fluid rounded" style="max-width:12rem;" alt="ard.png">
+                            <img src="/assets/img/publication_preview/ard.png" class="img-fluid rounded" style="max-width:24rem;" alt="ard.png">
                         </picture>
                     </a>
                 </figure>
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <!-- Add more explainers here -->
-        </div>
+        </div>  
     </article>
 </div>
 
