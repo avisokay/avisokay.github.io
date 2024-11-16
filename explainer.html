@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col">
                 <!-- via https://stackoverflow.com/questions/41966638/jekyll-on-github-pages-include-markdown-in-another-markdown-file -->
-                {% capture my_include %}{% include explainers.html %}{% endcapture %}
+                {% capture my_include %}{% include explainers.md %}{% endcapture %}
                 {{ my_include | markdownify }}
             </div>
         </div>
