@@ -6,6 +6,25 @@
     <article>
         <br>
         <div class="row explainers">
+            <!-- Add more explainers here -->
+                        <div class="col-md-4 explainer">
+                <figure class="d-flex justify-content-center">
+                    <a href="/assets/explainers/ipd.html" target="_blank">
+                        <picture>
+                            <img src="/assets/img/durer_rhino.png" class="img-fluid rounded" style="max-width:24rem;" alt="ard.png">
+                        </picture>
+                    </a>
+                </figure>
+                <div class="title">
+                    <a href="/assets/explainers/ipd.html" target="_blank" style="font-size: 1.5rem; color: slategray; text-decoration: none;">
+                        Inference on Predicted Data</a>
+                </div>
+                <div class="snippet">
+                    <em>How do you perform valid inference when your dependent variable 
+                        is imputed, or predicted, or otherwise not measured directly?</em>
+                </div>
+            </div>
+            <!-- Add more explainers here -->
             <div class="col-md-4 explainer">
                 <figure class="d-flex justify-content-center">
                     <a href="https://avisokay.shinyapps.io/uw_ard_viz/" target="_blank">
@@ -23,23 +42,6 @@
                 </div>
             </div>
             <!-- Add more explainers here -->
-                        <div class="col-md-4 explainer">
-                <figure class="d-flex justify-content-center">
-                    <a href="/assets/explainers/ipd.html" target="_blank">
-                        <picture>
-                            <img src="/assets/img/durer_rhino.png" class="img-fluid rounded" style="max-width:24rem;" alt="ard.png">
-                        </picture>
-                    </a>
-                </figure>
-                <div class="title">
-                    <a href="/assets/explainers/ipd.html" target="_blank" style="font-size: 1.5rem; color: slategray; text-decoration: none;">
-                        Inference on Predicted Data</a>
-                </div>
-                <div class="snippet">
-                    <em>How do you perform valud inference when your dependent variable 
-                        is imputed, or predicted, or otherwise not measured directly?</em>
-                </div>
-            </div>
         </div>  
     </article>
 </div>
