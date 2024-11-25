@@ -14,7 +14,9 @@
             padding-top: 1rem; /* Adjust the padding to reduce height */
             padding-bottom: 1rem; /* Adjust the padding to reduce height */
             width: 100%;
-            transition: position 0.3s ease;
+            transition: top 0.5s ease; /* Smooth transition for top position */
+            transition: bottom 0.5s ease; /* Smooth transition for top position */
+
         }
 
         .jumbotron.fixed {
@@ -33,8 +35,8 @@
 
         .image-container {
             position: relative;
-            width: 375px; /* Set the width of the images */
-            height: 250px; /* Set the height of the images */
+            width: 400px; /* Set the width of the images */
+            height: 280px; /* Set the height of the images */
             display: block; /* Stack containers on top of each other */
             margin-bottom: -20px; /* Remove margin between the images */
         }
@@ -61,8 +63,8 @@
         }
 
         .explainer {
-            padding-top: px; /* Adjust this value to ensure it stays below the jumbotron */
-            margin: 0 auto;
+            padding-top: 300px; /* Adjust this value to make the explainer text start higher */
+            margin: 176;
             max-width: 1000px; /* Set a max-width for consistent margins */
         }
     </style>
@@ -73,8 +75,8 @@
             <div class="row">
                 <!-- the left column  -->
                 <div class="col-md-6 text-left">
+                    <h1 class="mb-2 mt-2">🦏 Inference on Predicted Data (IPD)</h1>
                     <p class="text-left">
-                        <h1 class="mb-2 mt-2">🦏 Inference on Predicted Data (IPD)</h1>
                         The problem: a researcher is interested in studying an outcome, Y, which is difficult to measure due to practical constraints such as
                         time or cost. But they do have access to relatively cheap predictions of Y. They hypothesize that Y is associated with X, 
                         a set of features which are easier to measure. Their goal is to estimate a parameter of scientific interest, θ, which describes the 
@@ -91,7 +93,7 @@
                             <img id="image1" style="max-width:42rem;" src="/assets/img/durer_rhino.png" alt="Image 1">
                             <img id="image2" style="max-width:42rem;" src="/assets/img/black_rhino.png" alt="Image 2">
                         </div>
-                        <div class="image-container mt-3">
+                        <div class="image-container">
                             <img id="image3" style="max-width:42rem;" src="/assets/img/koseman_rhino.png" alt="Image 3">
                             <img id="image4" style="max-width:42rem;" src="/assets/img/black_rhino.png" alt="Image 4">
                         </div>
@@ -104,23 +106,23 @@
                                 const image2 = document.getElementById('image2');
                                 const image3 = document.getElementById('image3');
                                 const image4 = document.getElementById('image4');
-                    
+    
                                 // Calculate the opacity based on scroll position
                                 const opacity = Math.min((scrollPosition - triggerHeight) / window.innerHeight, 1);
-                    
+    
                                 // Set the opacity for the images
                                 image1.style.opacity = 1 - Math.max(opacity, 0);
                                 image2.style.opacity = Math.max(opacity, 0);
                                 image3.style.opacity = 1 - Math.max(opacity, 0);
                                 image4.style.opacity = Math.max(opacity, 0);
                             });
-                
+
                             window.addEventListener('scroll', function() {
                                 const jumbotron = document.getElementById('jumbotron');
                                 const explainer = document.querySelector('.explainer');
                                 const scrollPosition = window.scrollY;
                                 const fixedHeight = 1200; // Adjust this value to keep it fixed longer
-                
+
                                 if (scrollPosition > fixedHeight) {
                                     jumbotron.classList.remove('fixed');
                                     explainer.style.position = 'relative';
@@ -142,7 +144,69 @@
     <div class="container explainer">
         <div class="row">
             <div class="col">
-                Explainer in progress. Please check back in a few weeks from now :) 
+                Explainer in progress. Please check back in a few weeks from now :) Explainer in progress. Please check back in a few weeks from now :) Explainer in progress. Please check back in a few weeks from now :) 
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                
             </div>
         </div>
     </div>
