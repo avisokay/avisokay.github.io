@@ -75,12 +75,12 @@
             <div class="row">
                 <!-- the left column  -->
                 <div class="col-md-6 text-left">
-                    <h1 class="mb-2 mt-2">🦏 Inference on Predicted Data (IPD)</h1>
+                    <h1 class="mb-2 mt-2">Inference on Predicted Data (IPD)</h1>
                     <p class="text-left">
                         The problem: a researcher is interested in studying an outcome, Y, which is difficult to measure due to practical constraints such as
                         time or cost. But they do have access to relatively cheap predictions of Y. They hypothesize that Y is associated with X, 
                         a set of features which are easier to measure. Their goal is to estimate a parameter of scientific interest, θ, which describes the 
-                        relationship between X and Y. How can the researcher attain valid estimates of θ using mostly predicted outcomes of Y?
+                        relationship between X and Y. How can the researcher attain valid estimates of θ relying upon mostly predicted outcomes of Y?
                         <br>
                         <br>
                         For a more extensive overview, please see <a href="https://arxiv.org/abs/2401.08702">Hoffman et al. 2024</a> and the <a href="https://github.com/ipd-tools/ipd">code respository</a> for the `ipd` package.
@@ -145,6 +145,15 @@
         <div class="row">
             <div class="col">
                 Explainer in progress. Please check back in a few weeks from now :) 
+
+                <ol>
+                    <li>What is "predicted data"?</li>
+                    <li>Why is subsequent inference on predicted data likely invalid?</li>
+                    <li>What is the intuition for how we correct this? *cite IPD lit*</li>
+                    <li>IPD checklist - how do you identify if you
+                            (1) have an IPD problem & (2) have what you need to perform a correction?</li>
+                    <li>Some examples? VA, BMI, etc.</li>
+                  </ol>
                 
             </div>
         </div>
