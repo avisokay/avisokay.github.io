@@ -11,6 +11,29 @@
                         <div class="col-sm-2">
                             <figure>
                                 <picture>
+                                <img src="/assets/img/publication_preview/lfo.png" class="img-fluid rounded" alt="lfo.png">
+                                </picture>
+                            </figure>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="title">Legal Financial Obligations in Washington’s Courts</div>
+                            <div class="author">
+                                Karl Jones, Lindsey R. Beach, Amanda B. Gilman, Wei Wang, Carl McCurley, Brandon Morande, <u><strong>Adam Visokay</strong></u>
+                            </div>
+                            <div class="periodical">
+                                <em>Washington State Center for Court Research (WSSCR), 2024</em>
+                            </div>
+                            <div class="links">
+                                <a href="https://www.courts.wa.gov/subsite/wsccr/docs/LFO%20WSCCR%20Report%20-%20Published.pdf" target="_blank">pdf</a>
+                            </div>
+                        </div>
+                    </div>
+                </ol>
+                <ol class="bibliography">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <figure>
+                                <picture>
                                 <img src="/assets/img/publication_preview/va.png" class="img-fluid rounded" alt="va.png">
                                 </picture>
                             </figure>
