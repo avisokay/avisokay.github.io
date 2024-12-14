@@ -24,7 +24,7 @@
                                 <em>Washington State Center for Court Research (WSSCR), 2024</em>
                             </div>
                             <div class="links">
-                                <a href="https://www.courts.wa.gov/subsite/wsccr/docs/LFO%20WSCCR%20Report%20-%20Published.pdf" target="_blank">pdf</a>
+                                <a href="https://www.courts.wa.gov/subsite/wsccr/docs/LFO%20WSCCR%20Report%20-%20Published.pdf" class="btn btn-sm btn-outline-primary" target="_blank">pdf</a>
                             </div>
                         </div>
                     </div>
