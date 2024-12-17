@@ -16,7 +16,6 @@
             width: 100%;
             transition: top 0.5s ease; /* Smooth transition for top position */
             transition: bottom 0.5s ease; /* Smooth transition for top position */
-
         }
 
         .jumbotron.fixed {
@@ -31,6 +30,7 @@
         body {
             margin: 0;
             padding: 0;
+            font-size: 1.2rem; /* Adjust the font size as needed */
         }
 
         .image-container {
@@ -65,7 +65,14 @@
         .explainer {
             padding-top: 300px; /* Adjust this value to make the explainer text start higher */
             margin: 176;
-            max-width: 1000px; /* Set a max-width for consistent margins */
+            max-width: 1200px; /* Set a max-width for consistent margins */
+        }
+        .centered-container {
+            display: flex;
+            justify-content: left; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            width: 200%; /* Set the width to 100% of the parent */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
@@ -81,6 +88,13 @@
                         time or cost. But they do have access to relatively cheap predictions of Y. They hypothesize that Y is associated with X, 
                         a set of features which are easier to measure. Their goal is to estimate a parameter of scientific interest, θ, which describes the 
                         relationship between X and Y. How can the researcher attain valid estimates of θ relying upon mostly predicted outcomes of Y?
+                        <br>
+                        <br>
+                        Regression we want is <u>Expensive</u> but <u>Precise</u>  &nbsp; &rarr; &nbsp; &nbsp; <strong>Y = θ<sub>1</sub> X</strong>
+                        <br>
+                        Regression we have is <u>Cheaper</u> but <u>Noisier</u>  &nbsp; &nbsp; &nbsp; &rarr; &nbsp; &nbsp; <strong>Y&#770; = θ<sub>2</sub> X</strong>
+                        <br>
+                        Importantly, <strong>θ<sub>1</sub></strong> is not the same as <strong>θ<sub>2</sub></strong>!
                         <br>
                         <br>
                         For a more extensive overview, please see <a href="https://arxiv.org/abs/2401.08702">Hoffman et al. 2024</a> and the <a href="https://github.com/ipd-tools/ipd">code respository</a> for the `ipd` package.
@@ -148,7 +162,122 @@
 
                 <ol>
                     <li>What is "predicted data"?</li>
-                    <li>Why is subsequent inference on predicted data likely invalid?</li>
+                    <br>
+                    In machine learning, "predicted data" are often thought of as the outputs from
+                    some kind of complicated algorithm. I opt for an even broader definition: <strong>any 
+                    indirect measure of a conceptual variable where a better, more direct measure exists.</strong> 
+                    This definition of course includes predictions from black-box machine learning or artificial 
+                    intelligence models like chatGPT, but also includes other examples we encounter often as social 
+                    scientists, like survey responses, interviews, imputations, statistical estimates, derived measures, 
+                    and a whole host of other proxies. Below are some examples I have come across in my own work.
+                    <br>
+                    <br>
+                    Every conceptual variable comes with different measurement challenges, but in general, more precise 
+                    measurement comes at a cost. A stylized image below shows that "ground truth" direct measures tend to live 
+                    in the light blue region, with predicted data everywhere else. Because the best measures tend to be the most 
+                    expensive, we often end up relying on cheaper and noisier predicted data in practice. But not all predicted data
+                    are created equal. The best are those depicted in the green region - relatively precise and cheap compared
+                    to the red region - noisy and expensive. 
+                    <br>
+                    <br>
+
+
+                    <html>
+                    <head>
+                        <title>Predicted vs Ground Truth Data</title>
+                        <style>
+                            .container {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: flex-start;
+                            }
+                            table {
+                                width: 48%;
+                                border-collapse: collapse;
+                                margin: 20px 0;
+                                font-size: 15px;
+                                text-align: left;
+                            }
+                            th, td {
+                                padding: 16px;
+                                border-bottom: 1px solid #ddd;
+                            }
+                            th {
+                                background-color: #f2f2f2;
+                            }
+                            tr:hover {
+                                background-color: #f5f5f5;
+                            }
+                            img {
+                                width: 48%;
+                                height: auto;
+                            }
+                            h2 {
+                                text-align: center;
+                            }
+                        </style>
+                    </head>
+                    <body>
+
+                    <h2>Measurements Vary in both Cost and Precision</h2>
+                    
+                    <div class="container">
+                        <table>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Ground Truth</th>
+                                <th>Predicted</th>
+                            </tr>
+                            <tr>
+                                <td>Cause of Death</td>
+                                <td>Vital Registration</td>
+                                <td>Verbal Autopsy</td>
+                            </tr>
+                            <tr>
+                                <td>Obesity</td>
+                                <td>Fat Percentage</td>
+                                <td>BMI</td>
+                            </tr>
+                            <tr>
+                                <td>Income</td>
+                                <td>Admin Data</td>
+                                <td>Self Reported</td>
+                            </tr>
+                            <tr>
+                                <td>Environmental Attitude</td>
+                                <td>Questionnaire</td>
+                                <td>NLP Sentiment</td>
+                            </tr>
+                        </table>
+                        <img src="../img/predictions_vary.png" alt="Predictions Vary">
+                    </div>
+                    <br>
+                    <br>
+
+                    <li>What does it mean if statistical inference on predicted data is invalid?</li>
+                    <br>
+                    In this context, valid statistical inference refers to both <strong>un-biased point estimates and 
+                    precise uncertainty bounds</strong>. Relative to inference performed with "ground truth" 
+                    outcomes, inference on predicted data may have biased point estimates due to systematic 
+                    differences between predictions and the ground truth, and the reported uncertainty will be 
+                    deceivingly narrow because it doesn't account for any of the prediction error. 
+                    <br>
+                    <br>
+                    Why does this matter? Consider a very simple hypothesis test where the p-value tells us whether 
+                    or not an observed relationship between X and y is statistically significant. This conclusion is 
+                    a function of both the point estimate and the uncertainty around that point estimate. Consider the stylized
+                    diagram below which demonstrates how bias and conservative uncertainty might lead to very different 
+                    scientific conclusions. 
+
+                    <h2>Inference can have bias and misleading uncertainty</h2>
+
+                        <div class="centered-container">
+                            <img src="../img/valid_inference.png" alt="Valid Inference">
+                        </div>
+
+                    
+
+
                     <li>What is the intuition for how we correct this? *cite IPD lit*</li>
                     <li>IPD checklist - how do you identify if you
                             (1) have an IPD problem & (2) have what you need to perform a correction?</li>
