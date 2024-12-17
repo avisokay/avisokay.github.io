@@ -169,19 +169,18 @@
                     This definition of course includes predictions from black-box machine learning or artificial 
                     intelligence models like chatGPT, but also includes other examples we encounter often as social 
                     scientists, like survey responses, interviews, imputations, statistical estimates, derived measures, 
-                    and a whole host of other proxies. Below are some examples I have come across in my own work.
+                    and a whole host of other proxies. Below are some examples I have come across in my own research.
                     <br>
                     <br>
                     Every conceptual variable comes with different measurement challenges, but in general, more precise 
-                    measurement comes at a cost. A stylized image below shows that "ground truth" direct measures tend to live 
-                    in the light blue region, with predicted data everywhere else. Because the best measures tend to be the most 
+                    measurements are also more expensive to collect. A stylized image below shows that "ground truth" <span style="color: hsl(209, 75%, 75%);"><strong><u>direct measures</u></strong></span> 
+                    tend to live in the light blue region, with predicted data everywhere else. Because the best measures tend to be the most 
                     expensive, we often end up relying on cheaper and noisier predicted data in practice. But not all predicted data
-                    are created equal. The best are those depicted in the green region - relatively precise and cheap compared
-                    to the red region - noisy and expensive. 
+                    are created equal. The best are those depicted in the green region - relatively <span style="color: hsl(104, 50%, 65%);"><strong><u>precise and cheap</u></strong></span> compared
+                    to the red region - <span style="color: hsl(359, 75%, 75%);"><strong><u>noisy and expensive</u></strong></span>. 
                     <br>
                     <br>
-
-
+                    209, 59, 88
                     <html>
                     <head>
                         <title>Predicted vs Ground Truth Data</title>
@@ -256,14 +255,14 @@
 
                     <li>What does it mean if statistical inference on predicted data is invalid?</li>
                     <br>
-                    In this context, valid statistical inference refers to both <strong>un-biased point estimates and 
-                    precise uncertainty bounds</strong>. Relative to inference performed with "ground truth" 
+                    In this context, valid statistical inference refers to both <strong>un-biased point estimates</strong> and 
+                    <strong>precise uncertainty bounds</strong>. Relative to inference performed with "ground truth" 
                     outcomes, inference on predicted data may have biased point estimates due to systematic 
                     differences between predictions and the ground truth, and the reported uncertainty will be 
                     deceivingly narrow because it doesn't account for any of the prediction error. 
                     <br>
                     <br>
-                    Why does this matter? Consider a very simple hypothesis test where the p-value tells us whether 
+                    <u>Why does this matter?</u> Consider a very simple hypothesis test where the p-value tells us whether 
                     or not an observed relationship between X and y is statistically significant. This conclusion is 
                     a function of both the point estimate and the uncertainty around that point estimate. Consider the stylized
                     diagram below which demonstrates how bias and conservative uncertainty might lead to very different 
