@@ -160,128 +160,136 @@
             <div class="col">
                 Explainer in progress. Please check back in a few weeks from now :) 
 
-                <ol>
-                    <li>What is "predicted data"?</li>
-                    <br>
-                    In machine learning, "predicted data" are often thought of as the outputs from
-                    some kind of complicated algorithm. I opt for an even broader definition: <strong>any 
-                    indirect measure of a conceptual variable where a better, more direct measure exists.</strong> 
-                    This definition of course includes predictions from black-box machine learning or artificial 
-                    intelligence models like chatGPT, but also includes other examples we encounter often as social 
-                    scientists, like survey responses, interviews, imputations, statistical estimates, derived measures, 
-                    and a whole host of other proxies. Below are some examples I have come across in my own research.
-                    <br>
-                    <br>
-                    Every conceptual variable comes with different measurement challenges, but in general, more precise 
-                    measurements are also more expensive to collect. A stylized image below shows that "ground truth" <span style="color: hsl(209, 75%, 75%);"><strong><u>direct measures</u></strong></span> 
-                    tend to live in the light blue region, with predicted data everywhere else. Because the best measures tend to be the most 
-                    expensive, we often end up relying on cheaper and noisier predicted data in practice. But not all predicted data
-                    are created equal. The best are those depicted in the green region - relatively <span style="color: hsl(104, 50%, 65%);"><strong><u>precise and cheap</u></strong></span> compared
-                    to the red region - <span style="color: hsl(359, 75%, 75%);"><strong><u>noisy and expensive</u></strong></span>. 
-                    <br>
-                    <br>
-                    209, 59, 88
-                    <html>
-                    <head>
-                        <title>Predicted vs Ground Truth Data</title>
-                        <style>
-                            .container {
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: flex-start;
-                            }
-                            table {
-                                width: 48%;
-                                border-collapse: collapse;
-                                margin: 20px 0;
-                                font-size: 15px;
-                                text-align: left;
-                            }
-                            th, td {
-                                padding: 16px;
-                                border-bottom: 1px solid #ddd;
-                            }
-                            th {
-                                background-color: #f2f2f2;
-                            }
-                            tr:hover {
-                                background-color: #f5f5f5;
-                            }
-                            img {
-                                width: 48%;
-                                height: auto;
-                            }
-                            h2 {
-                                text-align: center;
-                            }
-                        </style>
-                    </head>
-                    <body>
+                
+                <h2>What is "predicted data"?</h2>
+                <br>
+                In machine learning, "predicted data" are often thought of as the outputs from
+                some kind of complicated algorithm. I opt for an even broader definition: <strong>any 
+                indirect measure of a conceptual variable where a better, more direct measure exists.</strong> 
+                This definition of course includes predictions from black-box machine learning or artificial 
+                intelligence models like chatGPT, but also includes other examples we encounter often as social 
+                scientists, like survey responses, interviews, imputations, statistical estimates, derived measures, 
+                and a whole host of other proxies. Below are some examples I have come across in my own research.
+                <br>
+                <br>
+                Every conceptual variable comes with different measurement challenges, but in general, more precise 
+                measurements are also more expensive to collect. A stylized image below shows that "ground truth" <span style="color: hsl(209, 75%, 75%);"><strong><u>direct measures</u></strong></span> 
+                tend to live in the light blue region, with predicted data everywhere else. Because the best measures tend to be the most 
+                expensive, we often end up relying on cheaper and noisier predicted data in practice. But not all predicted data
+                are created equal. The best are those depicted in the green region - relatively <span style="color: hsl(104, 50%, 65%);"><strong><u>precise and cheap</u></strong></span> compared
+                to the red region - <span style="color: hsl(359, 75%, 75%);"><strong><u>noisy and expensive</u></strong></span>. 
+                <br>
+                <br>
 
-                    <h2>Measurements Vary in both Cost and Precision</h2>
-                    
-                    <div class="container">
-                        <table>
-                            <tr>
-                                <th>Variable</th>
-                                <th>Ground Truth</th>
-                                <th>Predicted</th>
-                            </tr>
-                            <tr>
-                                <td>Cause of Death</td>
-                                <td>Vital Registration</td>
-                                <td>Verbal Autopsy</td>
-                            </tr>
-                            <tr>
-                                <td>Obesity</td>
-                                <td>Fat Percentage</td>
-                                <td>BMI</td>
-                            </tr>
-                            <tr>
-                                <td>Income</td>
-                                <td>Admin Data</td>
-                                <td>Self Reported</td>
-                            </tr>
-                            <tr>
-                                <td>Environmental Attitude</td>
-                                <td>Questionnaire</td>
-                                <td>NLP Sentiment</td>
-                            </tr>
-                        </table>
-                        <img src="../img/predictions_vary.png" alt="Predictions Vary">
-                    </div>
-                    <br>
-                    <br>
+                <html>
+                <head>
+                    <title>Predicted vs Ground Truth Data</title>
+                    <style>
+                        .container {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                        }
+                        table {
+                            width: 48%;
+                            border-collapse: collapse;
+                            margin: 20px 0;
+                            font-size: 15px;
+                            text-align: left;
+                        }
+                        th, td {
+                            padding: 16px;
+                            border-bottom: 1px solid #ddd;
+                        }
+                        th {
+                            background-color: #f2f2f2;
+                        }
+                        tr:hover {
+                            background-color: #f5f5f5;
+                        }
+                        img {
+                            width: 48%;
+                            height: auto;
+                        }
+                        h2 {
+                            text-align: center;
+                        }
+                    </style>
+                </head>
+                <body>
 
-                    <li>What does it mean if statistical inference on predicted data is invalid?</li>
-                    <br>
-                    In this context, valid statistical inference refers to both <strong>un-biased point estimates</strong> and 
-                    <strong>precise uncertainty bounds</strong>. Relative to inference performed with "ground truth" 
-                    outcomes, inference on predicted data may have biased point estimates due to systematic 
-                    differences between predictions and the ground truth, and the reported uncertainty will be 
-                    deceivingly narrow because it doesn't account for any of the prediction error. 
-                    <br>
-                    <br>
-                    <u>Why does this matter?</u> Consider a very simple hypothesis test where the p-value tells us whether 
-                    or not an observed relationship between X and y is statistically significant. This conclusion is 
-                    a function of both the point estimate and the uncertainty around that point estimate. Consider the stylized
-                    diagram below which demonstrates how bias and conservative uncertainty might lead to very different 
-                    scientific conclusions. 
+                <h2>Measurements Vary in both Cost and Precision</h2>
+                
+                <div class="container">
+                    <table>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Ground Truth</th>
+                            <th>Predicted</th>
+                        </tr>
+                        <tr>
+                            <td>Cause of Death</td>
+                            <td>Vital Registration</td>
+                            <td>Verbal Autopsy</td>
+                        </tr>
+                        <tr>
+                            <td>Obesity</td>
+                            <td>Fat Percentage</td>
+                            <td>BMI</td>
+                        </tr>
+                        <tr>
+                            <td>Income</td>
+                            <td>Admin Data</td>
+                            <td>Self Reported</td>
+                        </tr>
+                        <tr>
+                            <td>Environmental Attitude</td>
+                            <td>Questionnaire</td>
+                            <td>NLP Sentiment</td>
+                        </tr>
+                    </table>
+                    <img src="../img/predictions_vary.png" alt="Predictions Vary">
+                </div>
+                <br>
+                <br>
 
-                    <h2>Inference can have bias and misleading uncertainty</h2>
+                <h2>What does it mean if statistical inference on predicted data is invalid?</h2>
+                <br>
+                In this context, valid statistical inference refers to both <strong>un-biased point estimates</strong> and 
+                <strong>precise uncertainty bounds</strong>. Relative to inference performed with "ground truth" 
+                outcomes, inference on predicted data may have biased point estimates due to systematic 
+                differences between predictions and the ground truth, and the reported uncertainty will be 
+                deceivingly narrow because it doesn't account for any of the prediction error. 
+                <br>
+                <br>
+                <u>Why does this matter?</u> Consider a very simple hypothesis test where the p-value tells us whether 
+                or not an observed relationship between X and y is statistically significant. This conclusion is 
+                a function of both the point estimate and the uncertainty around that point estimate. Consider the stylized
+                diagram below which demonstrates how bias and conservative uncertainty might lead to very different 
+                scientific conclusions. 
 
-                        <div class="centered-container">
-                            <img src="../img/valid_inference.png" alt="Valid Inference">
-                        </div>
+                <h2>Inference can have bias and/or misleading uncertainty</h2>
 
-                    
+                <div class="centered-container">
+                    <img src="../img/valid_inference.png" alt="Valid Inference">
+                </div>
+
+                <br>
+
+                
+
+                
 
 
-                    <li>What is the intuition for how we correct this? *cite IPD lit*</li>
-                    <li>IPD checklist - how do you identify if you
-                            (1) have an IPD problem & (2) have what you need to perform a correction?</li>
-                    <li>Some examples? VA, BMI, etc.</li>
-                  </ol>
+                <h2>What is the intuition for how we correct this? *cite IPD lit*</h2>
+
+                <br>
+                <br>
+
+                <h2>IPD checklist - how do you identify if you (1) have an IPD problem & (2) have what you need to perform a correction?</h2>
+                <br>
+                <br>
+                <h2>Some examples? VA, BMI, etc.</h2>
                 
             </div>
         </div>
