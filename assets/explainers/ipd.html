@@ -218,7 +218,7 @@
                 </head>
                 <body>
 
-                <h2>Measurements Vary in both Cost and Precision</h2>
+                <h2>Measurements vary in both cost and precision</h2>
                 
                 <div class="container">
                     <table>
@@ -264,9 +264,11 @@
                 <br>
                 <u>Why does this matter?</u> Consider a very simple hypothesis test where the p-value tells us whether 
                 or not an observed relationship between X and y is statistically significant. This conclusion is 
-                a function of both the point estimate and the uncertainty around that point estimate. Consider the stylized
-                diagram below which demonstrates how bias and conservative uncertainty might lead to very different 
-                scientific conclusions. 
+                a function of both the point estimate and the uncertainty around that point estimate. The stylized
+                diagram below demonstrates how bias and conservative uncertainty might lead to very different 
+                scientific conclusions.
+                <br>
+                <br>
 
                 <h2>Inference can have bias and/or misleading uncertainty</h2>
 
@@ -276,20 +278,41 @@
 
                 <br>
 
-                
+                <h2>What is the intuition for how perform valid IPD?</h2>
+                <br>
+                There are several existing methods for performing the bias correction for valid inference 
+                with predicted data. While the technical details differ, these methods are built upon the same intuition.
+                At its simplest, you incorporate what you learn when you have access to both ground truth and predicted 
+                outcomes into downstream inference where you rely solely on predicted outcomes. 
+                The two step procedure looks like this:
+                <br>
+                <br>
+                <ol>
+                    <li>Using side-by-side ground truth and predicted measures of the outcome variable, estimate
+                        the <strong>IPD rectifier, &Delta;</strong>. This tells you how differences between Y and Y&#770; are 
+                        associated with covariates X for the same observation. 
+                        <br> 
+                        <center>(Y<sub>1</sub> - Y&#770;<sub>1</sub>) = &Delta;X<sub>1</sub></center></li>
+                    <li>Now, when you perform inference with predicted outcomes in the absence of ground truth 
+                        measured outcomes, you incorporate the rectifier &Delta; into the naive parameters you estimate to
+                        recover valid IPD estimates.
+                        <br>
+                        <center>Invalid IPD &rarr; Y&#770;<sub>2</sub> = θX<sub>2</sub> </center>
+                        <center>Correct IPD &rarr; Y&#770;<sub>2</sub> = (θ+&Delta;)X<sub>2</sub></center></li>
+                </ol>
 
-                
+                Here is a cartoon example to motivate the mechanics of the correction procedure. 
 
 
-                <h2>What is the intuition for how we correct this? *cite IPD lit*</h2>
+
 
                 <br>
                 <br>
 
-                <h2>IPD checklist - how do you identify if you (1) have an IPD problem & (2) have what you need to perform a correction?</h2>
+                <h2>Do you have a case of invalid IPD? Here's a flowchart to help!</h2>
                 <br>
                 <br>
-                <h2>Some examples? VA, BMI, etc.</h2>
+
                 
             </div>
         </div>
