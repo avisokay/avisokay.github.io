@@ -293,7 +293,7 @@
                         the <strong>IPD rectifier, &Delta;</strong>. This tells you how differences between Y and Y&#770; are 
                         associated with covariates X for the same observation. 
                         <br> 
-                        <center>(Y<sub>1</sub> - Y&#770;<sub>1</sub>) = &Delta;X<sub>1</sub></center></li>
+                        <center>(Y<sub><em>i</em></sub> - Y&#770;<sub><em>i</em></sub>) = &Delta;X<sub><em>i</em></sub></center></li>
                     <li>Now, when you perform inference with predicted outcomes in the absence of ground truth 
                         measured outcomes, you incorporate the rectifier &Delta; into the naive parameters you estimate to
                         recover valid IPD estimates.
@@ -339,9 +339,10 @@
                         <br>
                         <center>y<sub>📏</sub> = &#946;<sub>📏</sub>🏀<sub><em>&#8467;</em></sub> or y<sub>m</sub> = &#946;<sub>m</sub>X<sub><em>&#8467;</em></sub></center>
                         <center>y<sub>✏️</sub> = &#946;<sub>✏️</sub>🏀<sub><em>&#8467;</em></sub> or y<sub>r</sub> = &#946;<sub>r</sub>X<sub><em>&#8467;</em></sub></center>
-                        with solution for &#946;<sub>m</sub> &Delta; written as &#946;<sub>m</sub> = (X<sub><em>&#8467;</em></sub><sup>T</sup>X<sub><em>&#8467;</em></sub>)<sup>-1</sup>X<sub><em>&#8467;</em></sub><sup>T</sup>y<sub>m</sub>
                         <br>
-                        and solution for &#946;<sub>r</sub> written as &#946;<sub>r</sub> = (X<sup>T</sup>X)<sup>-1</sup>X<sup>T</sup>y<sub>r</sub>
+                        with solution for &#946;<sub>m</sub> written as &#946;<sub>m</sub> = (X<sub><em>&#8467;</em></sub><sup>T</sup>X<sub><em>&#8467;</em></sub>)<sup>-1</sup>X<sub><em>&#8467;</em></sub><sup>T</sup>y<sub>m</sub>
+                        <br>
+                        and solution for &#946;<sub>r</sub> written as &#946;<sub>r</sub> = (X<sub><em>&#8467;</em></sub><sup>T</sup>X<sub><em>&#8467;</em></sub>)<sup>-1</sup>X<sub><em>&#8467;</em></sub><sup>T</sup>y<sub>r</sub>
                         <br>
                         <br>
                         and residuals between measured and self-reported height:
@@ -350,9 +351,11 @@
 
                     <img src="../img/ipd_rectifier.png" alt="IPD Rectifier">
                 </div>
-                In this example, the <strong>rectifier &Delta;</strong> is -1.375. To recover IPD corrected estimated &#946;<sub>r</sub> for the 
+                In this example, the <strong>rectifier &Delta;</strong> works out to -1.375 after matrix multiplication. 
+                To recover IPD corrected estimate &#946;<sub>IPD</sub> from the 
                 unlabeled data <em>&#x3BC;&#8467;</em>, we first estimate &#946;<sub>r</sub> from y<sub>r</sub> = 
-                &#946;<sub>r</sub>X<sub><em>&#x3BC;&#8467;</em></sub>. We find that &#946;<sub>r</sub> is 1.41. Then, we subtract the rectifier &Delta; from &#946;<sub>r</sub>
+                &#946;<sub>r</sub>X<sub><em>&#x3BC;&#8467;</em></sub>. We find that &#946;<sub>r</sub> is 1.41. Then, 
+                we subtract the rectifier &Delta; from &#946;<sub>r</sub>
                 to find &#946;<sub>IPD</sub>. All together, we have 
                 <br>
                 <br>
@@ -360,12 +363,21 @@
                 <center>1.41 - (-1.375) = 2.78</center>
                 <center><strong>&#946;<sub>IPD</sub> = 2.78</strong></center>
                 <br>
+                Below you can see each estimated &#946;. In the labeled data <em>&#8467;</em>, we see that the ground truth relationship
+                between basketball ability and directly measured height is &#946;<sub>m</sub>=2.37. Because some 
+                people self-reported being taller than they actually are, the estimated relationship is much weaker, with
+                &#946;<sub>r</sub>=1. Moving to the unlabeled data <em>&#x3BC;&#8467;</em>, we see that the naive estimate of the 
+                relationship between self-reported height and basketball ability is similarly weak, with &#946;<sub>r</sub> = 1.41. 
+                <br>
                 <div class="centered-container">
                     <img src="../img/ipd_plot.png" alt="IPD Plot">
                 </div>
                 <br>
                 As you can see, leveraging the relationship between directly measured height 📏 and self-reported height ✏️ 
-                in the labeled dataset <em>&#8467;</em> enables us to produce a valid estimate &#946;<sub>IPD</sub> in the unlabeled dataset <em>&#x3BC;&#8467;</em>. 
+                in the labeled dataset <em>&#8467;</em> enables us to produce a valid estimate &#946;<sub>IPD</sub> in the unlabeled dataset <em>&#x3BC;&#8467;</em>.
+                &#946;<sub>IPD</sub> = 2.78 is much closer to the ground truth  &#946;<sub>m</sub>=2.37, and we arrive at this 
+                conclusion even in the absense of ground truth measures in the unlabeled dataset. The true relationship between height 
+                and basketball ability is stronger than we would conclude relying upon predicted data alone. 
                 
                 
                 <br>
