@@ -173,19 +173,18 @@
             <div class="col">
                 <h2>What is "predicted data"?</h2>
                 In machine learning, "predicted data" are often thought of as the outputs from
-                some kind of complicated algorithm. I opt for an even broader definition: <strong>any 
-                indirect measure of a conceptual variable where a better, more direct measure exists.</strong> 
-                This definition of course includes predictions from black-box machine learning or artificial 
-                intelligence models like chatGPT, but also includes other examples we encounter often as social 
-                scientists, like survey responses, interviews, imputations, statistical estimates, derived measures, 
-                and a whole host of other proxies. Below are some examples I have come across in my own research.
+                a complicated algorithm. I opt for an even broader definition: <strong>any 
+                measure of a conceptual variable where a better, more direct measure exists.</strong> 
+                This definition includes predictions from black-box AI models like chatGPT, but also includes other 
+                data we rely upom as social scientists; survey responses, interviews, imputations, statistical estimates, derived measures, 
+                and a whole host of other proxies. Below is a table with some examples I have come across in my own research.
                 <br>
                 <br>
                 Every conceptual variable comes with different measurement challenges, but in general, more precise 
-                measurements are also more expensive to collect. A stylized image below shows that "ground truth" <span style="color: hsl(209, 75%, 75%);"><strong><u>direct measures</u></strong></span> 
-                tend to live in the light blue region, with predicted data everywhere else. Because the best measures tend to be the most 
-                expensive, we often end up relying on cheaper and noisier predicted data in practice. But not all predicted data
-                are created equal. The best are those depicted in the green region - relatively <span style="color: hsl(104, 50%, 65%);"><strong><u>precise and cheap</u></strong></span> compared
+                measurements are also more expensive to collect. A stylized image below shows that <span style="color: hsl(209, 75%, 75%);"><strong><u>expensive and precise</u></strong></span> 
+                ground truth measures tend to live in the light blue region, with predicted data everywhere else. Because of this cost-quality tradeoff,
+                we often resort to working with predicted data in practice. But not all predicted data
+                are created equally! The best are those depicted in the green region - relatively <span style="color: hsl(104, 50%, 65%);"><strong><u>precise and cheap</u></strong></span> compared
                 to the red region - <span style="color: hsl(359, 75%, 75%);"><strong><u>noisy and expensive</u></strong></span>. 
                 <br>
                 <br>
@@ -214,7 +213,7 @@
                             text-align: left;
                         }
                         th, td {
-                            padding: 15px;
+                            padding: 14px;
                             border-bottom: 1px solid #ddd;
                         }
                         th {
@@ -267,7 +266,6 @@
                     <img src="../img/predictions_vary.png" alt="Predictions Vary">
                 </div>
                 <br>
-                <br>
 
                 <h2>What does it mean for inference on predicted data to be <em>invalid</em>?</h2>
                 In this context, valid statistical inference refers to both <strong>un-biased point estimates</strong> and 
@@ -290,8 +288,6 @@
                 <div class="centered-container">
                     <img src="../img/valid_inference.png" alt="Valid Inference">
                 </div>
-
-                <br>
 
                 <h2>So how <em>do</em> you perform valid inference on predicted data?</h2>
                 There are several existing methods for performing the bias correction for valid inference 
@@ -347,37 +343,37 @@
                 <div class="container">
                     <div class="text">
                         For the labeled data <em>&#8467;</em>, we can specify the relationship, &#946;, between 
-                        height (measured, 📏, y<sub>m</sub> or reported, ✏️, y<sub>r</sub>) and basketball ability (🏀, X)
+                        height {measured:📏:y<sub>m</sub>} or {reported:✏️:y<sub>r</sub>} and basketball ability {🏀:X<sub><em>&#8467;</em></sub>}
                         with the following equations: 
                         <br>
-                        <center>y<sub>📏</sub> = &#946;<sub>📏</sub>🏀<sub><em>&#8467;</em></sub> or y<sub>m</sub> = &#946;<sub>m</sub>X<sub><em>&#8467;</em></sub></center>
-                        <center>y<sub>✏️</sub> = &#946;<sub>✏️</sub>🏀<sub><em>&#8467;</em></sub> or y<sub>r</sub> = &#946;<sub>r</sub>X<sub><em>&#8467;</em></sub></center>
+                        <center>y<sub>📏</sub> = &#946;<sub>📏</sub> 🏀<sub><em>&#8467;</em></sub> or y<sub>m</sub> = &#946;<sub>m</sub>X<sub><em>&#8467;</em></sub></center>
+                        <center>y<sub>✏️</sub> = &#946;<sub>✏️</sub>🏀<sub><em>&#8467;</em></sub> or y<sub>r</sub> =  &#946;<sub>r</sub>X<sub><em>&#8467;</em></sub></center>
                         <br>
-                        with solution for &#946;<sub>m</sub> written as &#946;<sub>m</sub> = (X<sub><em>&#8467;</em></sub><sup>T</sup>X<sub><em>&#8467;</em></sub>)<sup>-1</sup>X<sub><em>&#8467;</em></sub><sup>T</sup>y<sub>m</sub>
+                        solution for &#946;<sub>m</sub> written as &#946;<sub>m</sub> = (X<sub><em>&#8467;</em></sub><sup>T</sup>X<sub><em>&#8467;</em></sub>)<sup>-1</sup>X<sub><em>&#8467;</em></sub><sup>T</sup>y<sub>m</sub>
                         <br>
-                        and solution for &#946;<sub>r</sub> written as &#946;<sub>r</sub> = (X<sub><em>&#8467;</em></sub><sup>T</sup>X<sub><em>&#8467;</em></sub>)<sup>-1</sup>X<sub><em>&#8467;</em></sub><sup>T</sup>y<sub>r</sub>
+                        solution for &#946;<sub>r</sub> written as &#946;<sub>r</sub> = (X<sub><em>&#8467;</em></sub><sup>T</sup>X<sub><em>&#8467;</em></sub>)<sup>-1</sup>X<sub><em>&#8467;</em></sub><sup>T</sup>y<sub>r</sub>
                         <br>
                         <br>
-                        and residuals between measured and self-reported height:
+                        and residuals of reported height y<sub>✏️</sub> and measured height y<sub>📏</sub>
                         <center><img src="../img/height_residuals.png" alt="Height Residuals" style="width: 90%;"></center>
                     </div>
 
                     <img src="../img/ipd_rectifier.png" alt="IPD Rectifier">
                 </div>
                 <br>
-                In this example, the <strong>rectifier &Delta;</strong> works out to -1.375 after matrix multiplication. 
-                To recover IPD corrected estimate &#946;<sub>IPD</sub> from the 
+                After matrix multiplication, rectifier &Delta; works out to <strong>-1.375</strong>.
+                To recover the IPD corrected estimate &#946;<sub>IPD</sub> from the 
                 unlabeled data <em>&#x3BC;&#8467;</em>, we first estimate &#946;<sub>r</sub> from y<sub>r</sub> = 
-                &#946;<sub>r</sub>X<sub><em>&#x3BC;&#8467;</em></sub>. We find that &#946;<sub>r</sub> is 1.41. Then, 
+                &#946;<sub>r</sub>X<sub><em>&#x3BC;&#8467;</em></sub> just like above. We find that <em>&#x3BC;&#8467;</em> &#946;<sub>r</sub> is <strong>1.41</strong>. Then, 
                 we subtract the rectifier &Delta; from &#946;<sub>r</sub>
-                to find &#946;<sub>IPD</sub>. All together, we have 
-                <br>
+                to find &#946;<sub>IPD</sub>. This gives 
                 <br>
                 <center>&#946;<sub>IPD</sub> = &#946;<sub>r</sub> - &Delta; </center>
                 <center>1.41 - (-1.375) = 2.78</center>
                 <center><strong>&#946;<sub>IPD</sub> = 2.78</strong></center>
-                <br>
-                Below you can see each estimated &#946;. In the labeled data <em>&#8467;</em>, we see that the ground truth relationship
+                Below, you can see how the estimated relationships (<em>&#8467;</em> &#946;<sub>r</sub>, <em>&#8467;</em> &#946;<sub>m</sub>,
+                <em>&#x3BC;&#8467;</em> &#946;<sub>r</sub>, <em>&#x3BC;&#8467;</em> &#946;<sub>IPD</sub>) compare to eachother. 
+                In the labeled data <em>&#8467;</em>, we see that the ground truth relationship
                 between basketball ability and directly measured height is &#946;<sub>m</sub>=2.37. Because some 
                 people self-reported being taller than they actually are, the estimated relationship is much weaker, with
                 &#946;<sub>r</sub>=1. Moving to the unlabeled data <em>&#x3BC;&#8467;</em>, we see that the naive estimate of the 
@@ -387,12 +383,14 @@
                     <img src="../img/ipd_plot.png" alt="IPD Plot">
                 </div>
                 <br>
-                As you can see, leveraging the relationship between directly measured height 📏 and self-reported height ✏️ 
+                Leveraging the relationship between directly measured height 📏 and self-reported height ✏️ 
                 in the labeled dataset <em>&#8467;</em> enables us to produce a valid estimate &#946;<sub>IPD</sub> in the unlabeled dataset <em>&#x3BC;&#8467;</em>.
                 &#946;<sub>IPD</sub> = 2.78 is much closer to the ground truth  &#946;<sub>m</sub>=2.37, and we arrive at this 
-                conclusion even in the absense of ground truth measures in the unlabeled dataset. The true relationship between height 
-                and basketball ability is stronger than we would conclude relying upon predicted data alone. 
-                
+                conclusion <u>even in the absense of ground truth measures</u> in the unlabeled dataset <em>&#x3BC;&#8467;</em>.
+                The magnitude of the ground truth relationship between height and basketball ability is much larger than we would 
+                conclude from inference on predicted data. For more discussion about how IPD correction can alter your 
+                scientific conclusions, check out <a href="https://openreview.net/forum?id=QbCHlIqbDJ#discussion">Section 4.3</a> from my 2024 paper
+                <em>From Narratives to Numbers: Valid Inference Using Language Model Predictions from Verbal Autopsies</em>.
                 
                 <br>
                 <br>
@@ -405,7 +403,7 @@
                 <br>
 
                 <h2>IPD References</h2>
-                <center>(in order of publication date)</center>
+                <center>(in reverse order of publication date)</center>
                 <br>
                 <ol>
                     <li>
@@ -424,8 +422,12 @@
                         Do We Really Even Need Data? 🦏 <br><em>Hoffman, Salerno, Afiaz, Leek and McCormick.</em> 2024 <a href="https://arxiv.org/abs/2401.08702">arxiv</a>.
                     </li>
                     <li>
+                        From Narratives to Numbers: Valid Inference Using Language Model Predictions from Verbal Autopsies <strong>(multiPPI++)</strong> <br><em>Fan, Visokay, Hoffman, Salerno, Liu, Leek and McCormick.</em> 2024 <a href="https://openreview.net/forum?id=QbCHlIqbDJ#discussion">COLM</a>.
+                    </li>
+                    <li>
                         Code respository for the `ipd` package can be found <a href="https://github.com/ipd-tools/ipd">here</a>.
                     </li>
+                    
                 </ol>
                 <br>
 
