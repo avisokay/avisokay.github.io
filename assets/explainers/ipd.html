@@ -14,8 +14,7 @@
             padding-top: 1rem; /* Adjust the padding to reduce height */
             padding-bottom: 1rem; /* Adjust the padding to reduce height */
             width: 100%;
-            transition: top 0.5s ease; /* Smooth transition for top position */
-            transition: bottom 0.5s ease; /* Smooth transition for top position */
+            transition: top 0.5s ease, bottom 0.5s ease; /* Smooth transition for top and bottom position */
         }
 
         .jumbotron.fixed {
@@ -24,9 +23,11 @@
             left: 0;
             z-index: 1000; /* Ensure it stays on top */
         }
+
         .text-left {
             font-size: 1.5rem; /* Adjust the font size as needed */
         }
+
         body {
             margin: 0;
             padding: 0;
@@ -59,7 +60,7 @@
         }
 
         .extra-height {
-            height: 200vh; /* Add extra height at the bottom */
+            height: 75vh; /* Add extra height at the bottom */
         }
 
         .explainer {
@@ -67,12 +68,17 @@
             margin: 176;
             max-width: 1200px; /* Set a max-width for consistent margins */
         }
+
         .centered-container {
             display: flex;
             justify-content: left; /* Center horizontally */
             align-items: center; /* Center vertically */
             width: 200%; /* Set the width to 100% of the parent */
             height: auto; /* Maintain aspect ratio */
+        }
+
+        .target {
+            scroll-margin-top: 100px; /* Adjust this value to the height of your fixed header */
         }
     </style>
 </head>
@@ -92,7 +98,7 @@
                         <br>
                         Regression we want is <u>Expensive</u> but <u>Precise</u>  &nbsp; &rarr; &nbsp; &nbsp; <strong>Y = θ<sub>1</sub> X</strong>
                         <br>
-                        Regression we have is <u>Cheaper</u> but <u>Noisier</u>  &nbsp; &nbsp; &nbsp; &rarr; &nbsp; &nbsp; <strong>Y&#770; = θ<sub>2</sub> X</strong>
+                        Regression we have is <u>Cheaper</u> but <u>Noisier</u>  &nbsp; &nbsp; &rarr; &nbsp; &nbsp; <strong>Y&#770; = θ<sub>2</sub> X</strong>
                         <br>
                         Importantly, <strong>θ<sub>1</sub></strong> is not the same as <strong>θ<sub>2</sub></strong>!
                         <br>
@@ -111,48 +117,54 @@
                             <img id="image3" style="max-width:42rem;" src="/assets/img/koseman_rhino.png" alt="Image 3">
                             <img id="image4" style="max-width:42rem;" src="/assets/img/black_rhino.png" alt="Image 4">
                         </div>
-                    
-                        <script>
-                            window.addEventListener('scroll', function() {
-                                const scrollPosition = window.scrollY;
-                                const triggerHeight = 0; // when phase starts
-                                const image1 = document.getElementById('image1');
-                                const image2 = document.getElementById('image2');
-                                const image3 = document.getElementById('image3');
-                                const image4 = document.getElementById('image4');
-    
-                                // Calculate the opacity based on scroll position
-                                const opacity = Math.min((scrollPosition - triggerHeight) / window.innerHeight, 1);
-    
-                                // Set the opacity for the images
-                                image1.style.opacity = 1 - Math.max(opacity, 0);
-                                image2.style.opacity = Math.max(opacity, 0);
-                                image3.style.opacity = 1 - Math.max(opacity, 0);
-                                image4.style.opacity = Math.max(opacity, 0);
-                            });
-
-                            window.addEventListener('scroll', function() {
-                                const jumbotron = document.getElementById('jumbotron');
-                                const explainer = document.querySelector('.explainer');
-                                const scrollPosition = window.scrollY;
-                                const fixedHeight = 1200; // Adjust this value to keep it fixed longer
-
-                                if (scrollPosition > fixedHeight) {
-                                    jumbotron.classList.remove('fixed');
-                                    explainer.style.position = 'relative';
-                                    explainer.style.top = '0';
-                                } else {
-                                    jumbotron.classList.add('fixed');
-                                    explainer.style.position = 'absolute';
-                                    explainer.style.top = `${fixedHeight}px`;
-                                }
-                            });
-                        </script>
                     </div>
                 </div>                
             </div>
         </div>
     </div>
+    <div class="explainer">
+        <!-- Your explainer content here -->
+    </div>
+    <div class="extra-height"></div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const triggerHeight = 0; // when phase starts
+            const image1 = document.getElementById('image1');
+            const image2 = document.getElementById('image2');
+            const image3 = document.getElementById('image3');
+            const image4 = document.getElementById('image4');
+
+            // Calculate the opacity based on scroll position
+            const opacity = Math.min((scrollPosition - triggerHeight) / window.innerHeight, 1);
+
+            // Set the opacity for the images
+            image1.style.opacity = 1 - Math.max(opacity, 0);
+            image2.style.opacity = Math.max(opacity, 0);
+            image3.style.opacity = 1 - Math.max(opacity, 0);
+            image4.style.opacity = Math.max(opacity, 0);
+        });
+
+        window.addEventListener('scroll', function() {
+            const jumbotron = document.getElementById('jumbotron');
+            const explainer = document.querySelector('.explainer');
+            const scrollPosition = window.scrollY;
+            const fixedHeight = 1200; // Adjust this value to keep it fixed longer
+
+            if (scrollPosition > fixedHeight) {
+                jumbotron.classList.remove('fixed');
+                jumbotron.style.position = 'relative';
+                jumbotron.style.top = `${fixedHeight}px`;
+            } else {
+                jumbotron.classList.add('fixed');
+                jumbotron.style.position = 'fixed';
+                jumbotron.style.top = '0';
+            }
+        });
+    </script>
+</body>
+</html>
 
     <!-- text for explainer -->
     <div class="container explainer">
@@ -351,6 +363,7 @@
 
                     <img src="../img/ipd_rectifier.png" alt="IPD Rectifier">
                 </div>
+                <br>
                 In this example, the <strong>rectifier &Delta;</strong> works out to -1.375 after matrix multiplication. 
                 To recover IPD corrected estimate &#946;<sub>IPD</sub> from the 
                 unlabeled data <em>&#x3BC;&#8467;</em>, we first estimate &#946;<sub>r</sub> from y<sub>r</sub> = 
