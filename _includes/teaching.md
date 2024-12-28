@@ -11,7 +11,7 @@
                         <div class="col-sm-2">
                             <figure>
                                 <picture>
-                                <img src="/assets/img/teaching_preview/crit_values.png" class="img-fluid rounded" alt="crit_values.png">
+                                <img src="/assets/img/teaching_preview/mathcamp.png" class="img-fluid rounded" alt="mathcamp.png">
                                 </picture>
                             </figure>
                         </div>
