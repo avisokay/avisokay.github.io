@@ -1,12 +1,12 @@
 - name: Home
   link: /index.html
-- name: CV
-  link: /cv.html
 - name: Publications
   link: /publications.html
 - name: Explainers
   link: /explainers.html
 - name: Teaching
   link: /teaching.html
+- name: CV
+  link: /cv.html
 - name: About
   link: /about.html
