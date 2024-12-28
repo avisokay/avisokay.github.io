@@ -16,7 +16,7 @@
                             </figure>
                         </div>
                         <div class="col-sm-10">
-                            <div class="title">Math Camp</div>
+                            <div class="title">Math Camp (graduate)</div>
                             <div class="author">
                                 Instructor: <u><strong>Adam Visokay</strong></u><br>
                                 Instructor: Jessica P. Kunke
@@ -40,7 +40,7 @@
                             </figure>
                         </div>
                         <div class="col-sm-10">
-                            <div class="title">SOC 110 Survey of Sociology</div>
+                            <div class="title">SOC 110 Survey of Sociology (undergraduate)</div>
                             <div class="author">
                                 Instructor: Dr. Rosalind Kicheler<br>
                                 TA: <u><strong>Adam Visokay</strong></u><br>
@@ -65,7 +65,7 @@
                             </figure>
                         </div>
                         <div class="col-sm-10">
-                            <div class="title">STAT 221 Statistical Concepts and Methods for the Social Sciences</div>
+                            <div class="title">STAT 221 Statistical Concepts and Methods for the Social Sciences (undergraduate)</div>
                             <div class="author">
                                 Instructor: Dr. Emanuela Furfaro <br>
                                 TA: <u><strong>Adam Visokay</strong></u><br>
@@ -90,7 +90,7 @@
                             </figure>
                         </div>
                         <div class="col-sm-10">
-                            <div class="title">STAT 221 Statistical Concepts and Methods for the Social Sciences</div>
+                            <div class="title">STAT 221 Statistical Concepts and Methods for the Social Sciences (undergraduate)</div>
                             <div class="author">
                                 Instructor: Dr. William Brown <br>
                                 TA: <u><strong>Adam Visokay</strong></u><br>
