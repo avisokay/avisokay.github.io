@@ -16,13 +16,13 @@
                             </figure>
                         </div>
                         <div class="col-sm-10">
-                            <div class="title">Math Camp (graduate)</div>
+                            <div class="title">Math Camp: Center for Statistics and the Social Science (graduate)</div>
                             <div class="author">
                                 Instructor: <u><strong>Adam Visokay</strong></u><br>
                                 Instructor: Jessica P. Kunke
                             </div>
                             <div class="periodical">
-                                Summer 2024. <em>Center for Statistics and the Social Sciences</em>
+                                Summer 2024. <em>Algebra, Functions, Matrix Algebra, Calculus, Probability Distributions, Introduction to Statistics & Maximum Likelihood.</em>
                             </div>
                             <div class="links">
                                 <a href="/assets/teaching/mathcamp.html" class="btn btn-sm btn-outline-primary" target="_blank">syllabus</a>
