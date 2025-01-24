@@ -16,7 +16,7 @@
                             </figure>
                         </div>
                         <div class="col-sm-10">
-                            <div class="title">Math Camp: Center for Statistics and the Social Science (graduate)</div>
+                            <div class="title">Math Camp: Center for Statistics and the Social Sciences (graduate)</div>
                             <div class="author">
                                 Instructor: <u><strong>Adam Visokay</strong></u><br>
                                 Instructor: Jessica P. Kunke
@@ -46,7 +46,7 @@
                                 TA: <u><strong>Adam Visokay</strong></u><br>
                             </div>
                             <div class="periodical">
-                                Spring 2024. <em>Human interaction, social institutions, social stratification, socialization, deviance, social control, social and cultural change. Course content may vary, depending upon instructor.</em>
+                                Spring 2024. <em>Human interaction, social institutions, social stratification, socialization, deviance, social control, social and cultural change.</em>
                             </div>
                             <div class="links">
                                 <a href="/assets/teaching/soc110spr2024_syllabus.pdf" class="btn btn-sm btn-outline-primary" target="_blank">syllabus</a>
@@ -94,6 +94,9 @@
                             <div class="author">
                                 Instructor: Dr. William Brown <br>
                                 TA: <u><strong>Adam Visokay</strong></u><br>
+                            </div>
+                            <div class="periodical">
+                                Fall 2024. <em>Develops statistical literacy. Examines objectives and pitfalls of statistical studies; study designs, data analysis, inference; graphical and numerical summaries of numerical and categorical data; correlation and regression; estimation, confidence intervals, and significance tests. Emphasizes social science examples and cases.</em>
                             </div>
                             <div class="links">
                                 <a href="/assets/teaching/stat221fall2024_syllabus.pdf" class="btn btn-sm btn-outline-primary" target="_blank">syllabus</a>
