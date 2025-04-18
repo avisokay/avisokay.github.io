@@ -4,31 +4,8 @@
         <article>
             <br>
             <div class="publications">
-                <h2 class="bibliography">2024</h2>
+                <h2 class="bibliography">Peer Reviewed Publications</h2>
                 <br>
-                <ol class="bibliography">
-                    <div class="row">
-                        <div class="col-sm-2">
-                            <figure>
-                                <picture>
-                                <img src="/assets/img/publication_preview/lfo.png" class="img-fluid rounded" alt="lfo.png">
-                                </picture>
-                            </figure>
-                        </div>
-                        <div class="col-sm-10">
-                            <div class="title">Legal Financial Obligations in Washington’s Courts</div>
-                            <div class="author">
-                                Karl Jones, Lindsey R. Beach, Amanda B. Gilman, Wei Wang, Carl McCurley, Brandon Morande, <u><strong>Adam Visokay</strong></u>
-                            </div>
-                            <div class="periodical">
-                                <em>Washington State Center for Court Research (WSSCR), 2024</em>
-                            </div>
-                            <div class="links">
-                                <a href="https://www.courts.wa.gov/subsite/wsccr/docs/LFO%20WSCCR%20Report%20-%20Published.pdf" class="btn btn-sm btn-outline-primary" target="_blank">pdf</a>
-                            </div>
-                        </div>
-                    </div>
-                </ol>
                 <ol class="bibliography">
                     <div class="row">
                         <div class="col-sm-2">
@@ -58,7 +35,7 @@
                         </div>
                     </div>
                 </ol>
-                <h2 class="bibliography">2023</h2>
+                <br>
                 <ol class="bibliography">
                     <div class="row">
                         <div class="col-sm-2">
@@ -86,7 +63,6 @@
                         </div>
                     </div>
                 </ol>
-                <h2 class="bibliography"></h2>
                 <ol class="bibliography">
                     <div class="row">
                         <div class="col-sm-2">
@@ -113,48 +89,81 @@
                         </div>
                     </div>
                 </ol>
-                <h2 class="bibliography"></h2>
+                <h2 class="bibliography">Working Papers</h2>
                 <ol class="bibliography">
                     <div class="row">
                         <div class="col-sm-2">
                             <figure>
                                 <picture>
-                                    <img src="/assets/img/publication_preview/super_spikes_did.png" class="img-fluid rounded" alt="super_spikes_did.png">
+                                    <img src="/assets/img/publication_preview/bmi.png" class="img-fluid rounded" alt="rrds.png">
                                 </picture>
                             </figure>
                         </div>
                         <div class="col-sm-10">
-                            <div class="title">Super Spikes: The Latest Controversy in Running Shoe Technology</div>
+                            <div class="title">How to measure obesity in public health research? Problems with using BMI for population inference
+                            </div>
                             <div class="author">
-                                <u><strong>Adam Visokay</strong></u>
+                                <u><strong>Adam Visokay</strong></u>, Kentaro Hoffman, Stephen Salerno, Tyler H. McCormick, and Sasha Johfre
+                            </div>
+                            <div class="periodical">
+                                <em>preprint
+                                </em>
                             </div>
                             <div class="links">
-                                <a href="/assets/super_spikes.pdf" class="btn btn-sm btn-outline-primary">pdf</a>
+                                <a href="https://www.medrxiv.org/content/10.1101/2025.04.01.25325037v1" class="btn btn-sm btn-outline-primary" target="_blank">medRiv</a>
                             </div>
                         </div>
                     </div>
                 </ol>
-                <!-- <h2 class="bibliography"></h2>
                 <ol class="bibliography">
                     <div class="row">
                         <div class="col-sm-2">
                             <figure>
                                 <picture>
-                                    <img src="/assets/img/publication_preview/ard.png" class="img-fluid rounded" alt="ard.png">
+                                    <img src="/assets/img/publication_preview/rashomon.png" class="img-fluid rounded" alt="rrds.png">
                                 </picture>
                             </figure>
                         </div>
                         <div class="col-sm-10">
-                            <div class="title">Aggregated Relational Data Primer</div>
+                            <div class="title">When you come to a fork in the road, take it: the Rashomon effect for social scientists</div>
                             <div class="author">
-                                <u><strong>Adam Visokay</strong></u>
+                                <u><strong>Adam Visokay</strong></u>, Eddie Hock, Kentaro Hoffman, and Tyler H. McCormick
+                            </div>
+                            <div class="periodical">
+                                <em>preprint
+                                </em>
                             </div>
                             <div class="links">
-                                <a href="https://avisokay.shinyapps.io/uw_ard_viz/" class="btn btn-sm btn-outline-primary" target="_blank">html</a>
+                                <a href="https://osf.io/preprints/socarxiv/8zybt_v1" class="btn btn-sm btn-outline-primary" target="_blank">SocArXiv</a>
                             </div>
                         </div>
                     </div>
-                </ol> -->
+                </ol>
+                <h2 class="bibliography">Other Writings</h2>
+                <br>
+                <ol class="bibliography">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <figure>
+                                <picture>
+                                <img src="/assets/img/publication_preview/lfo.png" class="img-fluid rounded" alt="lfo.png">
+                                </picture>
+                            </figure>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="title">Legal Financial Obligations in Washington’s Courts</div>
+                            <div class="author">
+                                Karl Jones, Lindsey R. Beach, Amanda B. Gilman, Wei Wang, Carl McCurley, Brandon Morande, <u><strong>Adam Visokay</strong></u>
+                            </div>
+                            <div class="periodical">
+                                <em>Washington State Center for Court Research (WSSCR), 2024</em>
+                            </div>
+                            <div class="links">
+                                <a href="https://www.courts.wa.gov/subsite/wsccr/docs/LFO%20WSCCR%20Report%20-%20Published.pdf" class="btn btn-sm btn-outline-primary" target="_blank">pdf</a>
+                            </div>
+                        </div>
+                    </div>
+                </ol>
             </div>
         </article>
 
