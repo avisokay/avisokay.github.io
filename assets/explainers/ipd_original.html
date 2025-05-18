@@ -1,0 +1,445 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        .jumbotron {
+            padding-top: 1rem; /* Adjust the padding to reduce height */
+            padding-bottom: 1rem; /* Adjust the padding to reduce height */
+            width: 100%;
+            transition: top 0.5s ease, bottom 0.5s ease; /* Smooth transition for top and bottom position */
+        }
+
+        .jumbotron.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+        .text-left {
+            font-size: 1.5rem; /* Adjust the font size as needed */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 1.2rem; /* Adjust the font size as needed */
+        }
+
+        .image-container {
+            position: relative;
+            width: 400px; /* Set the width of the images */
+            height: 280px; /* Set the height of the images */
+            display: block; /* Stack containers on top of each other */
+            margin-bottom: -20px; /* Remove margin between the images */
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 25px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.5s ease;
+        }
+
+        #image1, #image3 {
+            opacity: 1;
+        }
+
+        #image2, #image4 {
+            opacity: 0;
+        }
+
+        .extra-height {
+            height: 75vh; /* Add extra height at the bottom */
+        }
+
+        .explainer {
+            padding-top: 300px; /* Adjust this value to make the explainer text start higher */
+            margin: 176;
+            max-width: 1200px; /* Set a max-width for consistent margins */
+        }
+
+        .centered-container {
+            display: flex;
+            justify-content: left; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            width: 200%; /* Set the width to 100% of the parent */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .target {
+            scroll-margin-top: 100px; /* Adjust this value to the height of your fixed header */
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron mb-0" id="jumbotron">
+        <div class="container">
+            <div class="row">
+                <!-- the left column  -->
+                <div class="col-md-6 text-left">
+                    
+                    <p class="text-left">
+                        <h1 class="mb-2 mt-2">Inference on Predicted Data (IPD)</h1>
+                        The problem: a researcher is interested in studying an outcome, Y, which is difficult to measure due to practical constraints such as
+                        time or cost. But they do have access to relatively cheap predictions of Y. They hypothesize that Y is associated with X, 
+                        a set of features which are easier to measure. Their goal is to estimate a parameter of scientific interest, θ, which describes the 
+                        relationship between X and Y. How can the researcher attain valid estimates of θ relying upon mostly predicted outcomes of Y?
+                        <br>
+                        <br>
+                        Regression we want is <u>Expensive</u> but <u>Precise</u>  &nbsp; &rarr; &nbsp; &nbsp; <strong>Y = θ<sub>1</sub> X</strong>
+                        <br>
+                        Regression we have is <u>Cheaper</u> but <u>Noisier</u>  &nbsp; &nbsp; &rarr; &nbsp; &nbsp; <strong>Y&#770; = θ<sub>2</sub> X</strong>
+                        <br>
+                        Importantly, <strong>θ<sub>1</sub></strong> is not the same as <strong>θ<sub>2</sub></strong>!
+                        <br>
+                        <br>
+                        Rhinoceros analogy from <a href="https://arxiv.org/abs/2401.08702">Hoffman et al. 2024</a>.
+                    </p>
+                </div>
+                <!-- right column -->
+                <div class="col-md-6 d-flex flex-column">
+                    <div class="my-auto d-flex flex-column align-items-center">
+                        <div class="image-container">
+                            <img id="image1" style="max-width:42rem;" src="/assets/img/durer_rhino.png" alt="Image 1">
+                            <img id="image2" style="max-width:42rem;" src="/assets/img/black_rhino.png" alt="Image 2">
+                        </div>
+                        <div class="image-container">
+                            <img id="image3" style="max-width:42rem;" src="/assets/img/koseman_rhino.png" alt="Image 3">
+                            <img id="image4" style="max-width:42rem;" src="/assets/img/black_rhino.png" alt="Image 4">
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <div class="explainer">
+        <!-- Your explainer content here -->
+    </div>
+    <div class="extra-height"></div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const triggerHeight = 0; // when phase starts
+            const image1 = document.getElementById('image1');
+            const image2 = document.getElementById('image2');
+            const image3 = document.getElementById('image3');
+            const image4 = document.getElementById('image4');
+
+            // Calculate the opacity based on scroll position
+            const opacity = Math.min((scrollPosition - triggerHeight) / window.innerHeight, 1);
+
+            // Set the opacity for the images
+            image1.style.opacity = 1 - Math.max(opacity, 0);
+            image2.style.opacity = Math.max(opacity, 0);
+            image3.style.opacity = 1 - Math.max(opacity, 0);
+            image4.style.opacity = Math.max(opacity, 0);
+        });
+
+        window.addEventListener('scroll', function() {
+            const jumbotron = document.getElementById('jumbotron');
+            const explainer = document.querySelector('.explainer');
+            const scrollPosition = window.scrollY;
+            const fixedHeight = 1200; // Adjust this value to keep it fixed longer
+
+            if (scrollPosition > fixedHeight) {
+                jumbotron.classList.remove('fixed');
+                jumbotron.style.position = 'relative';
+                jumbotron.style.top = `${fixedHeight}px`;
+            } else {
+                jumbotron.classList.add('fixed');
+                jumbotron.style.position = 'fixed';
+                jumbotron.style.top = '0';
+            }
+        });
+    </script>
+</body>
+</html>
+
+    <!-- text for explainer -->
+    <div class="container explainer">
+        <div class="row">
+            <div class="col">
+                <h2>What is "predicted data"?</h2>
+                In machine learning, "predicted data" are often thought of as the outputs from
+                a complicated algorithm. I opt for an even broader definition: <strong>any 
+                measure of a conceptual variable where a better, more direct measure exists.</strong> 
+                This definition includes predictions from black-box AI models like chatGPT, but also includes other 
+                data we rely upon as social scientists, like survey responses, interviews, imputations, statistical estimates, derived measures, 
+                and a whole host of other proxies. Below is a table with some examples I have come across in my own research.
+                <br>
+                <br>
+                Every conceptual variable comes with different measurement challenges, but in general, more precise 
+                measurements are also more expensive to collect. A stylized image below shows that <span style="color: hsl(209, 75%, 75%);"><strong><u>expensive and precise</u></strong></span> 
+                ground truth measures tend to live in the light blue region, with predicted data everywhere else. Because of this cost-quality tradeoff,
+                we often resort to working with predicted data in practice. But not all predicted data
+                are created equally! The best are those depicted in the green region - relatively <span style="color: hsl(104, 50%, 65%);"><strong><u>precise and cheap</u></strong></span> compared
+                to the red region - <span style="color: hsl(359, 75%, 75%);"><strong><u>noisy and expensive</u></strong></span>. 
+                <br>
+                <br>
+
+                <html>
+                <head>
+                    <title>Predicted vs Ground Truth Data</title>
+                    <style>
+                        .container {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-start;
+                        }
+                        .text {
+                            flex: 1;
+                            margin-right: 20px;
+                        }
+                        .container img {
+                            margin-right: 40px; /* Add horizontal space */
+                        }
+                        table {
+                            width: 48%;
+                            border-collapse: collapse;
+                            margin: 20px 0;
+                            font-size: 20px;
+                            text-align: left;
+                        }
+                        th, td {
+                            padding: 14px;
+                            border-bottom: 1px solid #ddd;
+                        }
+                        th {
+                            background-color: #f2f2f2;
+                        }
+                        tr:hover {
+                            background-color: #f5f5f5;
+                        }
+                        img {
+                            width: 48%;
+                            height: auto;
+                        }
+                        h2 {
+                            text-align: center;
+                        }
+                    </style>
+                </head>
+                <body>
+
+                <h2>Measurements vary in both cost and precision</h2>
+                
+                <div class="container">
+                    <table>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Ground Truth</th>
+                            <th>Predicted</th>
+                        </tr>
+                        <tr>
+                            <td>Cause of Death</td>
+                            <td>Vital Registration</td>
+                            <td>Verbal Autopsy</td>
+                        </tr>
+                        <tr>
+                            <td>Obesity</td>
+                            <td>Fat Percentage</td>
+                            <td>BMI</td>
+                        </tr>
+                        <tr>
+                            <td>Income</td>
+                            <td>Admin Data</td>
+                            <td>Self Reported</td>
+                        </tr>
+                        <tr>
+                            <td>Environmental Attitude</td>
+                            <td>Questionnaire</td>
+                            <td>NLP Sentiment</td>
+                        </tr>
+                    </table>
+                    <img src="../img/predictions_vary.png" alt="Predictions Vary">
+                </div>
+                <br>
+
+                <h2>What does it mean for inference on predicted data to be <em>invalid</em>?</h2>
+                In this context, valid statistical inference refers to both <strong>un-biased point estimates</strong> and 
+                <strong>precise uncertainty bounds</strong>. Relative to inference performed with "ground truth" 
+                outcomes, inference on predicted data may have biased point estimates due to systematic 
+                differences between predictions and the ground truth, and the reported uncertainty will be 
+                deceivingly narrow because it doesn't account for any of the prediction error. 
+                <br>
+                <br>
+                <u>Why does this matter?</u> Consider a very simple hypothesis test where the p-value tells us whether 
+                or not an observed relationship between X and y is statistically significant. This conclusion is 
+                a function of both the point estimate and the uncertainty around that point estimate. The stylized
+                diagram below demonstrates how bias and conservative uncertainty might lead to very different 
+                scientific conclusions.
+                <br>
+                <br>
+
+                <h2>Inference can have bias and/or misleading uncertainty</h2>
+
+                <div class="centered-container">
+                    <img src="../img/valid_inference.png" alt="Valid Inference">
+                </div>
+
+                <h2>So how <em>do</em> you perform valid inference on predicted data?</h2>
+                There are several existing methods for performing the bias correction for valid inference 
+                with predicted data. While the technical details differ, these methods are built upon the same intuition.
+                At its simplest, you incorporate what you learn when you have access to both ground truth and predicted 
+                outcomes into downstream inference where you rely solely on predicted outcomes. 
+                The two step procedure looks like this:
+                <br>
+                <br>
+                <ol>
+                    <li>Using side-by-side ground truth and predicted measures of the outcome variable, estimate
+                        the <strong>IPD rectifier, &Delta;</strong>. This tells you how differences between Y and Y&#770; are 
+                        associated with covariates X for the same observation. 
+                        <br> 
+                        <center>(Y<sub><em>i</em></sub> - Y&#770;<sub><em>i</em></sub>) = &Delta;X<sub><em>i</em></sub></center></li>
+                    <li>Now, when you perform inference with predicted outcomes in the absence of ground truth 
+                        measured outcomes, you incorporate the rectifier &Delta; into the naive parameters you estimate to
+                        recover valid IPD estimates.
+                        <br>
+                        <center>Invalid IPD &rarr; Y&#770;<sub>2</sub> = θX<sub>2</sub> </center>
+                        <center>Correct IPD &rarr; Y&#770;<sub>2</sub> = (θ+&Delta;;)X<sub>2</sub></center></li>
+                </ol>
+
+                <h2>Cartoon example: height and basketball ability</h2>
+                We are interested in the association between a person's height and an index of their 
+                basketball ability on a scale from 1-10. Height can be measured directly, 
+                or from a self-report. Some people might report correctly, 
+                others might not, so we consider the self-reported height <strong>predicted</strong> data 
+                relative to directly measured height as <strong>ground truth</strong> data.
+                <br>
+                <br>
+                <div class="centered-container">
+                    <img src="../img/height.png" alt="Height">
+                </div>
+                <br>
+                Oops! It looks like some people report being a couple inches taller than they actually are... 
+                How does this affect our conclusion about the association between height and basketball ability when
+                we are relying on mostly self-reported height outcomes? Let's see. This is what it looks like to learn the 
+                <strong>rectifier &Delta;</strong> from the labeled data to correct inference performed on the 
+                unlabeled data.
+                <br>
+                <br>
+                <div class="container">
+                    <img src="../img/bball_data.png" alt="Bball Data"> 
+                    <div class="text">
+                        <br>
+                        First, we have some labeled data, <em>&#8467;</em>, with observed basketball ability 🏀, 
+                        with both measured height 📏 and self-reported height ✏️. We also have some unlabeled data, 
+                        <em>&#x3BC;&#8467;</em>, with observed basketball ability 🏀 and only self-reported height ✏️.
+                    </div>
+                </div>
+                <br>
+                <div class="container">
+                    <div class="text">
+                        For the labeled data <em>&#8467;</em>, we can specify the relationship, &#946;, between 
+                        height {measured:📏:y<sub>m</sub>} or {reported:✏️:y<sub>r</sub>} and basketball ability {🏀:X<sub><em>&#8467;</em></sub>}
+                        with the following equations: 
+                        <br>
+                        <center>y<sub>📏</sub> = &#946;<sub>📏</sub> 🏀<sub><em>&#8467;</em></sub> or y<sub>m</sub> = &#946;<sub>m</sub>X<sub><em>&#8467;</em></sub></center>
+                        <center>y<sub>✏️</sub> = &#946;<sub>✏️</sub>🏀<sub><em>&#8467;</em></sub> or y<sub>r</sub> =  &#946;<sub>r</sub>X<sub><em>&#8467;</em></sub></center>
+                        <br>
+                        solution for &#946;<sub>m</sub> written as &#946;<sub>m</sub> = (X<sub><em>&#8467;</em></sub><sup>T</sup>X<sub><em>&#8467;</em></sub>)<sup>-1</sup>X<sub><em>&#8467;</em></sub><sup>T</sup>y<sub>m</sub>
+                        <br>
+                        solution for &#946;<sub>r</sub> written as &#946;<sub>r</sub> = (X<sub><em>&#8467;</em></sub><sup>T</sup>X<sub><em>&#8467;</em></sub>)<sup>-1</sup>X<sub><em>&#8467;</em></sub><sup>T</sup>y<sub>r</sub>
+                        <br>
+                        <br>
+                        and residuals of reported height y<sub>✏️</sub> and measured height y<sub>📏</sub>
+                        <center><img src="../img/height_residuals.png" alt="Height Residuals" style="width: 90%;"></center>
+                    </div>
+
+                    <img src="../img/ipd_rectifier.png" alt="IPD Rectifier">
+                </div>
+                <br>
+                After matrix multiplication, rectifier &Delta; works out to <strong>-1.375</strong>.
+                To recover the IPD corrected estimate &#946;<sub>IPD</sub> from the 
+                unlabeled data <em>&#x3BC;&#8467;</em>, we first estimate &#946;<sub>r</sub> from y<sub>r</sub> = 
+                &#946;<sub>r</sub>X<sub><em>&#x3BC;&#8467;</em></sub> just like above. We find that <em>&#x3BC;&#8467;</em> &#946;<sub>r</sub> is <strong>1.41</strong>. Then, 
+                we subtract the rectifier &Delta; from &#946;<sub>r</sub>
+                to find &#946;<sub>IPD</sub>. This gives 
+                <br>
+                <center>&#946;<sub>IPD</sub> = &#946;<sub>r</sub> - &Delta; </center>
+                <center>1.41 - (-1.375) = 2.78</center>
+                <center><strong>&#946;<sub>IPD</sub> = 2.78</strong></center>
+                Below, you can see how the estimated relationships (<em>&#8467;</em> &#946;<sub>r</sub>, <em>&#8467;</em> &#946;<sub>m</sub>,
+                <em>&#x3BC;&#8467;</em> &#946;<sub>r</sub>, <em>&#x3BC;&#8467;</em> &#946;<sub>IPD</sub>) compare to eachother. 
+                In the labeled data <em>&#8467;</em>, we see that the ground truth relationship
+                between basketball ability and directly measured height is &#946;<sub>m</sub>=2.37. Because some 
+                people self-reported being taller than they actually are, the estimated relationship is much weaker, with
+                &#946;<sub>r</sub>=1. Moving to the unlabeled data <em>&#x3BC;&#8467;</em>, we see that the naive estimate of the 
+                relationship between self-reported height and basketball ability is similarly weak, with &#946;<sub>r</sub> = 1.41. 
+                <br>
+                <div class="centered-container">
+                    <img src="../img/ipd_plot.png" alt="IPD Plot">
+                </div>
+                <br>
+                Leveraging the relationship between directly measured height 📏 and self-reported height ✏️ 
+                in the labeled dataset <em>&#8467;</em> enables us to produce a valid estimate &#946;<sub>IPD</sub> in the unlabeled dataset <em>&#x3BC;&#8467;</em>.
+                &#946;<sub>IPD</sub> = 2.78 is much closer to the ground truth  &#946;<sub>m</sub>=2.37, and we arrive at this 
+                conclusion <u>even in the absense of ground truth measures</u> in the unlabeled dataset <em>&#x3BC;&#8467;</em>.
+                The magnitude of the ground truth relationship between height and basketball ability is much larger than we would 
+                conclude from inference on predicted data. For more discussion about how IPD correction can alter your 
+                scientific conclusions, check out <a href="https://openreview.net/forum?id=QbCHlIqbDJ#discussion">Section 4.3</a> from my 2024 paper
+                <em>From Narratives to Numbers: Valid Inference Using Language Model Predictions from Verbal Autopsies</em>.
+                
+                <br>
+                <br>
+
+                <h2>How to determine if IPD correction makes sense for your problem:</h2>
+                <br>
+                <div class="centered-container">
+                    <img src="../img/flowchart.png" alt="Flowchart">
+                </div>
+                <br>
+
+                <h2>IPD References</h2>
+                <center>(in reverse order of publication date)</center>
+                <br>
+                <ol>
+                    <li>
+                        Methods for correcting inference based on outcomes predicted by machine learning. <strong>(PostPI)</strong> <br><em>Wang, McCormick and Leek.</em> 2020 <a href="https://www.pnas.org/doi/suppl/10.1073/pnas.2001238117">PNAS</a>.
+                    </li>
+                    <li>
+                        Prediction-powered inference. <strong>(PPI)</strong> <br><em>Angelopoulos, Bates, Fannjiang, Jordan and Zrnic.</em> 2023a <a href="https://www.science.org/doi/10.1126/science.adi6000">Science</a>.
+                    </li>
+                    <li>
+                        PPI++: Efficient Prediction-Powered Inference. <strong>(PPI++)</strong> <br><em>Angelopoulos, Duchi and Zrnic.</em> 2023b <a href="https://arxiv.org/abs/2311.01453">arxiv</a>.
+                    </li>
+                    <li>
+                        Assumption-Lean and Data-Adaptive Post-Prediction Inference. <strong>(PSPA)</strong> <br><em>Miao, Miao, Wu, Zhao and Lu.</em> 2023 <a href="https://arxiv.org/abs/2311.14220">arxiv</a>.
+                    </li>
+                    <li>
+                        Do We Really Even Need Data? 🦏 <br><em>Hoffman, Salerno, Afiaz, Leek and McCormick.</em> 2024 <a href="https://arxiv.org/abs/2401.08702">arxiv</a>.
+                    </li>
+                    <li>
+                        From Narratives to Numbers: Valid Inference Using Language Model Predictions from Verbal Autopsies <strong>(multiPPI++)</strong> <br><em>Fan, Visokay, Hoffman, Salerno, Liu, Leek and McCormick.</em> 2024 <a href="https://openreview.net/forum?id=QbCHlIqbDJ#discussion">COLM</a>.
+                    </li>
+                    <li>
+                        Code respository for the `ipd` package can be found <a href="https://github.com/ipd-tools/ipd">here</a>.
+                    </li>
+                    
+                </ol>
+                <br>
+
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+<br>
+<br>
