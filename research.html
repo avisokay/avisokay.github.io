@@ -25,7 +25,7 @@
             <div class="row">
                 <!-- the left column with text -->
                 <div class="col-md-12 text-left">
-                    <h1 class="mb-2 mt-2">📚 Publications</h1>
+                    <h1 class="mb-2 mt-2">📚 Research</h1>
                     <p class="text-left">
                         Publications listed in reverse chronological order.
                     </p>
@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col">
                 <!-- via https://stackoverflow.com/questions/41966638/jekyll-on-github-pages-include-markdown-in-another-markdown-file -->
-                {% capture my_include %}{% include publications.md %}{% endcapture %}
+                {% capture my_include %}{% include research.md %}{% endcapture %}
                 {{ my_include | markdownify }}
             </div>
         </div>

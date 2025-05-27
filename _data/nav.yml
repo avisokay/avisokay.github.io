@@ -1,7 +1,7 @@
 - name: Home
   link: /index.html
-- name: Publications
-  link: /publications.html
+- name: Research
+  link: /research.html
 - name: Explainers
   link: /explainers.html
 - name: Teaching
