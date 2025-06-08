@@ -64,7 +64,7 @@
     <div class="container">
         <article>
             <div class="publications">
-                <h2 class="bibliography">Peer Reviewed Publications <span style="font-size: 0.6em;">(* denotes co-first-author)</span></h2></h2>
+                <h2 class="bibliography">Peer Reviewed Publications <span style="font-size: 0.6em;">(* denotes co-first-author)</span></h2>
                 
                 <div class="publication-content">
                     <img src="/assets/img/publication_preview/va.png" class="publication-image" alt="VA Publication">
