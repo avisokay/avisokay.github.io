@@ -10,36 +10,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
-        .jumbotron {
-            padding-top: 1rem; /* Adjust the padding to reduce height */
-            padding-bottom: 1rem; /* Adjust the padding to reduce height */
+        #jumbotron-spacer {
             width: 100%;
-            transition: top 0.5s ease, bottom 0.5s ease; /* Smooth transition for top and bottom position */
+        }
+
+        .jumbotron {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            width: 100%;
         }
 
         .jumbotron.fixed {
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 1000; /* Ensure it stays on top */
+            right: 0;
+            z-index: 1000;
         }
 
         .text-left {
-            font-size: 1.5rem; /* Adjust the font size as needed */
+            font-size: 1.5rem;
         }
 
         body {
             margin: 0;
             padding: 0;
-            font-size: 1.2rem; /* Adjust the font size as needed */
+            font-size: 1.2rem;
         }
 
         .image-container {
             position: relative;
-            width: 400px; /* Set the width of the images */
-            height: 280px; /* Set the height of the images */
-            display: block; /* Stack containers on top of each other */
-            margin-bottom: -20px; /* Remove margin between the images */
+            width: 400px;
+            height: 280px;
+            display: block;
+            margin-bottom: -20px;
         }
 
         .image-container img {
@@ -48,7 +52,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            transition: opacity 0.5s ease;
+            transition: opacity 0.3s ease;
         }
 
         #image1, #image3 {
@@ -60,40 +64,41 @@
         }
 
         .extra-height {
-            height: 75vh; /* Add extra height at the bottom */
+            height: 75vh;
         }
 
         .explainer {
-            padding-top: 300px; /* Adjust this value to make the explainer text start higher */
+            padding-top: 50px;
             margin: 176;
-            max-width: 1200px; /* Set a max-width for consistent margins */
+            max-width: 1200px;
         }
 
         .centered-container {
             display: flex;
-            justify-content: left; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            width: 200%; /* Set the width to 100% of the parent */
-            height: auto; /* Maintain aspect ratio */
+            justify-content: left;
+            align-items: center;
+            width: 200%;
+            height: auto;
         }
 
         .target {
-            scroll-margin-top: 100px; /* Adjust this value to the height of your fixed header */
+            scroll-margin-top: 100px;
         }
     </style>
 </head>
 <body>
+    <div id="jumbotron-spacer"></div>
     <div class="jumbotron mb-0" id="jumbotron">
         <div class="container">
             <div class="row">
                 <!-- the left column  -->
                 <div class="col-md-6 text-left">
-                    
+
                     <p class="text-left">
                         <h1 class="mb-2 mt-2">Inference on Predicted Data (IPD)</h1>
                         The problem: a researcher is interested in studying an outcome, Y, which is difficult to measure due to practical constraints such as
-                        time or cost. But they do have access to relatively cheap predictions of Y. They hypothesize that Y is associated with X, 
-                        a set of features which are easier to measure. Their goal is to estimate a parameter of scientific interest, θ, which describes the 
+                        time or cost. But they do have access to relatively cheap predictions of Y. They hypothesize that Y is associated with X,
+                        a set of features which are easier to measure. Their goal is to estimate a parameter of scientific interest, θ, which describes the
                         relationship between X and Y. How can the researcher attain valid estimates of θ relying upon mostly predicted outcomes of Y?
                         <br>
                         <br>
@@ -119,55 +124,13 @@
                             <img id="image4" style="max-width:42rem;" src="/assets/img/black_rhino.png" alt="Image 4">
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
     </div>
-    <div class="explainer">
-        <!-- Your explainer content here -->
-    </div>
-    <div class="extra-height"></div>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            const triggerHeight = 0; // when phase starts
-            const image1 = document.getElementById('image1');
-            const image2 = document.getElementById('image2');
-            const image3 = document.getElementById('image3');
-            const image4 = document.getElementById('image4');
-
-            // Calculate the opacity based on scroll position
-            const opacity = Math.min((scrollPosition - triggerHeight) / window.innerHeight, 1);
-
-            // Set the opacity for the images
-            image1.style.opacity = 1 - Math.max(opacity, 0);
-            image2.style.opacity = Math.max(opacity, 0);
-            image3.style.opacity = 1 - Math.max(opacity, 0);
-            image4.style.opacity = Math.max(opacity, 0);
-        });
-
-        window.addEventListener('scroll', function() {
-            const jumbotron = document.getElementById('jumbotron');
-            const explainer = document.querySelector('.explainer');
-            const scrollPosition = window.scrollY;
-            const fixedHeight = 1200; // Adjust this value to keep it fixed longer
-
-            if (scrollPosition > fixedHeight) {
-                jumbotron.classList.remove('fixed');
-                jumbotron.style.position = 'relative';
-                jumbotron.style.top = `${fixedHeight}px`;
-            } else {
-                jumbotron.classList.add('fixed');
-                jumbotron.style.position = 'fixed';
-                jumbotron.style.top = '0';
-            }
-        });
-    </script>
-</body>
-</html>
 
     <!-- text for explainer -->
+    <div id="content-pusher"></div>
     <div class="container explainer">
         <div class="row">
             <div class="col">
@@ -431,15 +394,55 @@
                 </ol>
                 <br>
 
-                
+
             </div>
         </div>
     </div>
 
+    <div class="extra-height"></div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const jumbotron = document.getElementById('jumbotron');
+            const spacer = document.getElementById('jumbotron-spacer');
+            const contentPusher = document.getElementById('content-pusher');
+            const scrollPosition = window.scrollY;
+
+            const image1 = document.getElementById('image1');
+            const image2 = document.getElementById('image2');
+            const image3 = document.getElementById('image3');
+            const image4 = document.getElementById('image4');
+
+            // Define the transition duration in pixels
+            const transitionDuration = window.innerHeight * 1.5; // 1.5 viewport heights of scrolling
+
+            // Calculate progress (0 to 1) through the transition
+            const progress = Math.max(0, Math.min(1, scrollPosition / transitionDuration));
+
+            // Apply easing function for smoother transition (ease-in-out)
+            const eased = progress < 0.5
+                ? 2 * progress * progress
+                : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+            // Set the opacity for the images
+            image1.style.opacity = 1 - eased;
+            image2.style.opacity = eased;
+            image3.style.opacity = 1 - eased;
+            image4.style.opacity = eased;
+
+            // Keep jumbotron fixed during transition, then release it
+            if (scrollPosition < transitionDuration) {
+                jumbotron.classList.add('fixed');
+                spacer.style.height = scrollPosition + 'px';
+                // Push content down so it doesn't appear during transition
+                contentPusher.style.height = (transitionDuration - scrollPosition) + 'px';
+            } else {
+                jumbotron.classList.remove('fixed');
+                spacer.style.height = transitionDuration + 'px';
+                contentPusher.style.height = '0px';
+            }
+        });
+    </script>
+
 </body>
 </html>
-
-
-
-<br>
-<br>
