@@ -70,7 +70,7 @@
                     <img src="/assets/img/publication_preview/gsv.png" class="publication-image" alt="GSV SIGSPATIAL Publication">
                     <div class="title">Street View for Whom? An Initial Examination of Google Street View’s Urban Coverage and Socioeconomic Indicators in the US</div>
                     <div class="author">
-                        Zeyu Wang, Yingchao Jian, <u><strong>Adam Visokay</strong></u>*, Don MacKenzie and Jon E. Froehlich
+                        Zeyu Wang, Yingchao Jian, <u><strong>Adam Visokay</strong></u>, Don MacKenzie and Jon E. Froehlich
                     </div>
                     <div class="periodical">
                         ACM SIGSPATIAL Conference, 2025
