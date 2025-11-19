@@ -67,6 +67,23 @@
                 <h2 class="bibliography">Peer Reviewed Publications <span style="font-size: 0.6em;">(* denotes co-first-author)</span></h2>
                 
                 <div class="publication-content">
+                    <img src="/assets/img/publication_preview/gsv.png" class="publication-image" alt="GSV SIGSPATIAL Publication">
+                    <div class="title">Street View for Whom? An Initial Examination of Google Street View’s Urban Coverage and Socioeconomic Indicators in the US</div>
+                    <div class="author">
+                        Zeyu Wang, Yingchao Jian, <u><strong>Adam Visokay</strong></u>*, Don MacKenzie and Jon E. Froehlich
+                    </div>
+                    <div class="periodical">
+                        ACM SIGSPATIAL Conference, 2025
+                    </div>
+                    <div class="links">
+                        <a href="https://makeabilitylab.cs.washington.edu/media/publications/Wang_StreetViewForWhomAnInitialExaminationOfGoogleStreetViewSUrbanCoverageAndSocioeconomicIndicatorsInTheUs_GeoIndustry2025.pdf" class="btn btn-sm btn-outline-primary" target="_blank">html</a>
+                        <a href="/assets/visokay2024va.pdf" class="btn btn-sm btn-outline-primary">pdf</a>
+                        <a href="https://github.com/makeabilitylab/GSVantage" class="btn btn-sm btn-outline-primary" target="_blank">code</a>
+                        <a href="/assets/gsv_SIGSPATIAL_slides.pdf" class="btn btn-sm btn-outline-primary">slides</a>
+                    </div>
+                </div>
+
+                <div class="publication-content">
                     <img src="/assets/img/publication_preview/va.png" class="publication-image" alt="VA Publication">
                     <div class="title">From Narratives to Numbers: Valid Inference Using Language Model Predictions from Verbal Autopsy Narratives</div>
                     <div class="author">
@@ -83,23 +100,6 @@
                         <a href="/assets/visokay2024va_poster.pdf" class="btn btn-sm btn-outline-primary">poster</a>
                         <a href="/assets/escience_IPD.pdf" class="btn btn-sm btn-outline-primary">slides</a>
                         <a href="https://www.youtube.com/watch?v=3iF826EnwRk" class="btn btn-sm btn-outline-primary">video</a>
-                    </div>
-                </div>
-
-                <div class="publication-content">
-                    <img src="/assets/img/publication_preview/gsv.png" class="publication-image" alt="GSV SIGSPATIAL Publication">
-                    <div class="title">Street View for Whom? An Initial Examination of Google Street View’s Urban Coverage and Socioeconomic Indicators in the US</div>
-                    <div class="author">
-                        Zeyu Wang, Yingchao Jian, <u><strong>Adam Visokay</strong></u>*, Don MacKenzie and Jon E. Froehlich
-                    </div>
-                    <div class="periodical">
-                        ACM SIGSPATIAL Conference, 2025
-                    </div>
-                    <div class="links">
-                        <a href="https://makeabilitylab.cs.washington.edu/media/publications/Wang_StreetViewForWhomAnInitialExaminationOfGoogleStreetViewSUrbanCoverageAndSocioeconomicIndicatorsInTheUs_GeoIndustry2025.pdf" class="btn btn-sm btn-outline-primary" target="_blank">html</a>
-                        <a href="/assets/visokay2024va.pdf" class="btn btn-sm btn-outline-primary">pdf</a>
-                        <a href="https://github.com/makeabilitylab/GSVantage" class="btn btn-sm btn-outline-primary" target="_blank">code</a>
-                        <a href="/assets/gsv_SIGSPATIAL_slides.pdf" class="btn btn-sm btn-outline-primary">slides</a>
                     </div>
                 </div>
                 
@@ -136,7 +136,6 @@
                     </div>
                 </div>
 
-
                 <div class="publication-content">
                     <img src="/assets/img/publication_preview/humboldt_park.png" class="publication-image" alt="GSV">
                     <div class="title">Social Construction of Urban Space: Understanding Neighborhood Boundaries Using Rental Listings</div>
@@ -162,14 +161,6 @@
                     </div>
                     <div class="links">
                         <a href="https://osf.io/preprints/socarxiv/8zybt_v1" class="btn btn-sm btn-outline-primary" target="_blank">SocArXiv</a>
-                    </div>
-                </div>
-
-                <div class="publication-content">
-                    <img src="/assets/img/publication_preview/gsv.png" class="publication-image" alt="Neighborhoods">
-                    <div class="title">Street View for Whom? A Critical Look at Google Street View’s Urban Coverage and Socioeconomic Indicators</div>
-                    <div class="author">
-                        Zeyu Wang, Yingchao Jian, <u><strong>Adam Visokay</strong></u>, Don MacKenzie and Jon E. Froehlich
                     </div>
                 </div>
                 
