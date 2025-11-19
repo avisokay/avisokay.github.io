@@ -4,8 +4,30 @@
         <article>
             <br>
             <div class="publications">
-                <h2 class="bibliography">2024</h2>
+                <h2 class="bibliography">2025</h2>
                 <br>
+                <ol class="bibliography">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <figure>
+                                <picture>
+                                <img src="/assets/img/teaching_preview/uw_soc.png" class="img-fluid rounded" alt="uw_soc.png">
+                                </picture>
+                            </figure>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="title">SOC 225 Data and Society (undergraduate)</div>
+                            <div class="author">
+                                Instructor: Dr. Zack W. Almquist<br>
+                                TA: <u><strong>Adam Visokay</strong></u><br>
+                            </div>
+                            <div class="periodical">
+                                Autumn 2025. <em>Social implications of the digital revolution, including ethical issues associated with algorithmic design and privacy. Discusses data science as a new occupation that uses data to understand or influence people's behavior. Students will use a sociological lens to explore how our increasingly digital lifestyle changes institutions and social relations.</em>
+                            </div>
+                        </div>
+                    </div>
+                </ol>
+                <h2 class="bibliography">2024</h2>
                 <ol class="bibliography">
                     <div class="row">
                         <div class="col-sm-2">
