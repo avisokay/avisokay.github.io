@@ -61,11 +61,11 @@
                 </div>
                 <div class="my-auto">
                     <h2 class="">News</h2>
-                    <p>
+                    <div class="news-scroll">
                         {% for item in site.data.news %}
-                    <div>{{item.name}}</div>
-                    {% endfor %}
-                    </p>
+                        <div>{{item.name}}</div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

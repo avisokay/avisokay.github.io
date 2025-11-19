@@ -44,3 +44,10 @@
     border-color: var(--slides-color);
     color: white;
 }
+
+/* Scrollable news section */
+.news-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
