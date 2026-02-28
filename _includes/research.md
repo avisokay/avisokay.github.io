@@ -14,7 +14,7 @@
                 </div>
                 <div class="links">
                     <a href="https://makeabilitylab.cs.washington.edu/media/publications/Wang_StreetViewForWhomAnInitialExaminationOfGoogleStreetViewSUrbanCoverageAndSocioeconomicIndicatorsInTheUs_GeoIndustry2025.pdf" class="btn btn-sm btn-outline-primary" target="_blank">html</a>
-                    <a href="/assets/visokay2024va.pdf" class="btn btn-sm btn-outline-primary">pdf</a>
+                    <a href="/assets/gsv_SIGSPATIAL.pdf" class="btn btn-sm btn-outline-primary">pdf</a>
                     <a href="https://github.com/makeabilitylab/GSVantage" class="btn btn-sm btn-outline-primary" target="_blank">code</a>
                     <a href="/assets/gsv_SIGSPATIAL_slides.pdf" class="btn btn-sm btn-outline-primary">slides</a>
                 </div>
