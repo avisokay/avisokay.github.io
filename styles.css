@@ -63,17 +63,11 @@
     font-size: 1.5rem;
 }
 
-/* Publication card styles (from _includes/research.md) */
-.publication-image {
-    display: block;
-    width: 600px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto 20px auto;
-    border-radius: 8px;
-}
-
+/* Publication card styles — side-by-side layout */
 .publication-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
     margin-bottom: 40px;
     padding-bottom: 20px;
     border-bottom: 1px solid #eaeaea;
@@ -81,6 +75,19 @@
 
 .publication-content:last-child {
     border-bottom: none;
+}
+
+.publication-image {
+    width: 180px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    display: block;
+    height: auto;
+}
+
+.publication-text {
+    flex: 1;
+    min-width: 0;
 }
 
 .publication-content .title {
@@ -105,6 +112,18 @@
     margin-right: 5px;
     margin-bottom: 5px;
     display: inline-block;
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 576px) {
+    .publication-content {
+        flex-direction: column;
+    }
+    .publication-image {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
 }
 
 h2.bibliography {
