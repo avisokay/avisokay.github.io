@@ -51,3 +51,65 @@
     overflow-y: auto;
     padding-right: 10px;
 }
+
+/* Shared page header (Bootstrap 5 removed .jumbotron) */
+.jumbotron {
+    background-color: #e9ecef;
+    padding: 2rem 1rem;
+}
+
+/* Subheading text size used in page intros */
+.text-left {
+    font-size: 1.5rem;
+}
+
+/* Publication card styles (from _includes/research.md) */
+.publication-image {
+    display: block;
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+}
+
+.publication-content {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.publication-content:last-child {
+    border-bottom: none;
+}
+
+.publication-content .title {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.publication-content .author {
+    margin-bottom: 8px;
+}
+
+.publication-content .periodical {
+    margin-bottom: 8px;
+}
+
+.publication-content .links {
+    margin-top: 12px;
+}
+
+.publication-content .links a {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+h2.bibliography {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaeaea;
+}
