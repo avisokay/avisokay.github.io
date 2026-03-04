@@ -1,7 +1,6 @@
 <article>
     <div class="publications">
         <h2 class="bibliography">Peer Reviewed Publications <span style="font-size: 0.6em;">(* denotes co-first-author)</span></h2>
-
         <div class="publication-content">
             <img src="/assets/img/publication_preview/gsv.png" class="publication-image" alt="GSV SIGSPATIAL Publication">
             <div class="publication-text">
@@ -20,7 +19,6 @@
                 </div>
             </div>
         </div>
-
         <div class="publication-content">
             <img src="/assets/img/publication_preview/va.png" class="publication-image" alt="VA Publication">
             <div class="publication-text">
@@ -33,7 +31,7 @@
                 </div>
                 <div class="links">
                     <a href="https://openreview.net/forum?id=QbCHlIqbDJ#discussion" class="btn btn-sm btn-outline-primary" target="_blank">html</a>
-                    <a href="https://arxiv.org/abs/2404.02438" class="btn btn-sm btn-outline-primary" target="_blank">arxiv</a>
+                    <a href="https://arxiv.org/abs/2404.02438" class="btn btn-sm btn-outline-primary" target="_blank">ArXiv</a>
                     <a href="/assets/visokay2024va.pdf" class="btn btn-sm btn-outline-primary">pdf</a>
                     <a href="https://github.com/avisokay/va_nlp/" class="btn btn-sm btn-outline-primary" target="_blank">code</a>
                     <a href="/assets/visokay2024va_poster.pdf" class="btn btn-sm btn-outline-primary">poster</a>
@@ -42,7 +40,6 @@
                 </div>
             </div>
         </div>
-
         <div class="publication-content">
             <img src="/assets/img/publication_preview/gptfed.png" class="publication-image" alt="GPT Fed Publication">
             <div class="publication-text">
@@ -55,15 +52,30 @@
                 </div>
                 <div class="links">
                     <a href="https://aclanthology.org/2023.findings-emnlp.434/" class="btn btn-sm btn-outline-primary" target="_blank">html</a>
-                    <a href="https://arxiv.org/abs/2407.19110" class="btn btn-sm btn-outline-primary" target="_blank">arxiv</a>
+                    <a href="https://arxiv.org/abs/2407.19110" class="btn btn-sm btn-outline-primary" target="_blank">ArXiv</a>
                     <a href="/assets/gptfed.pdf" class="btn btn-sm btn-outline-primary">pdf</a>
                     <a href="https://github.com/DenisPeskoff/FedNLP" class="btn btn-sm btn-outline-primary" target="_blank">code</a>
                 </div>
             </div>
         </div>
-
+        <div class="publication-content">
+            <img src="/assets/img/publication_preview/rrds_search.png" class="publication-image" alt="RRDS Publication">
+            <div class="publication-text">
+                <div class="title">Respondent-Driven Sampling: An Overview in the Context of Human Trafficking</div>
+                <div class="author">
+                    Jessica P. Kunke, <u><strong>Adam Visokay</strong></u> and Tyler H. McCormick
+                </div>
+                <div class="periodical">
+                    CHANCE, Volume 36, Issue 4, (American Statistical Association), 2023
+                </div>
+                <div class="links">
+                    <a href="https://www.tandfonline.com/doi/full/10.1080/09332480.2023.2290949" class="btn btn-sm btn-outline-primary" target="_blank">html</a>
+                    <a href="https://arxiv.org/abs/2309.16160" class="btn btn-sm btn-outline-primary" target="_blank">ArXiv</a>
+                    <a href="/assets/rrds.pdf" class="btn btn-sm btn-outline-primary">pdf</a>
+                </div>
+            </div>
+        </div>
         <h2 class="bibliography">Working Papers</h2>
-
         <div class="publication-content">
             <img src="/assets/img/publication_preview/rrds.png" class="publication-image" alt="RRDS Publication">
             <div class="publication-text">
@@ -75,12 +87,11 @@
                     preprint
                 </div>
                 <div class="links">
-                    <a href="https://arxiv.org/abs/2603.00365" class="btn btn-sm btn-outline-primary" target="_blank">arxiv</a>
+                    <a href="https://arxiv.org/abs/2603.00365" class="btn btn-sm btn-outline-primary" target="_blank">ArXiv</a>
                 </div>
             </div>
         </div>
-
-                <div class="publication-content">
+            <div class="publication-content">
             <img src="/assets/img/publication_preview/bmi.png" class="publication-image" alt="BMI Paper">
             <div class="publication-text">
                 <div class="title">How to measure obesity in public health research? Problems with using BMI for population inference</div>
@@ -91,11 +102,10 @@
                     preprint
                 </div>
                 <div class="links">
-                    <a href="https://www.medrxiv.org/content/10.1101/2025.04.01.25325037v1" class="btn btn-sm btn-outline-primary" target="_blank">medRiv</a>
+                    <a href="https://www.medrxiv.org/content/10.1101/2025.04.01.25325037v1" class="btn btn-sm btn-outline-primary" target="_blank">medrxiv</a>
                 </div>
             </div>
         </div>
-
         <div class="publication-content">
             <img src="/assets/img/publication_preview/humboldt_park.png" class="publication-image" alt="GSV">
             <div class="publication-text">
@@ -107,11 +117,10 @@
                     preprint
                 </div>
                 <div class="links">
-                    <a href="https://arxiv.org/abs/2506.00634" class="btn btn-sm btn-outline-primary" target="_blank">arXiv</a>
+                    <a href="https://arxiv.org/abs/2506.00634" class="btn btn-sm btn-outline-primary" target="_blank">ArXiv</a>
                 </div>
             </div>
         </div>
-
         <div class="publication-content">
             <img src="/assets/img/publication_preview/rashomon.png" class="publication-image" alt="Rashomon Paper">
             <div class="publication-text">
@@ -123,13 +132,11 @@
                     preprint
                 </div>
                 <div class="links">
-                    <a href="https://osf.io/preprints/socarxiv/8zybt_v1" class="btn btn-sm btn-outline-primary" target="_blank">SocArXiv</a>
+                    <a href="https://osf.io/preprints/socarxiv/8zybt_v2" class="btn btn-sm btn-outline-primary" target="_blank">SocArXiv</a>
                 </div>
             </div>
         </div>
-
         <h2 class="bibliography">Other Writings</h2>
-
         <div class="publication-content">
             <img src="/assets/img/publication_preview/lfo.png" class="publication-image" alt="LFO Report">
             <div class="publication-text">
@@ -145,24 +152,5 @@
                 </div>
             </div>
         </div>
-
-        <div class="publication-content">
-            <img src="/assets/img/publication_preview/rrds_search.png" class="publication-image" alt="RRDS Publication">
-            <div class="publication-text">
-                <div class="title">Respondent-Driven Sampling: An Overview in the Context of Human Trafficking</div>
-                <div class="author">
-                    Jessica P. Kunke, <u><strong>Adam Visokay</strong></u> and Tyler H. McCormick
-                </div>
-                <div class="periodical">
-                    CHANCE, Volume 36, Issue 4, (American Statistical Association), 2023
-                </div>
-                <div class="links">
-                    <a href="https://www.tandfonline.com/doi/full/10.1080/09332480.2023.2290949" class="btn btn-sm btn-outline-primary" target="_blank">html</a>
-                    <a href="https://arxiv.org/abs/2309.16160" class="btn btn-sm btn-outline-primary" target="_blank">arxiv</a>
-                    <a href="/assets/rrds.pdf" class="btn btn-sm btn-outline-primary">pdf</a>
-                </div>
-            </div>
-        </div>
-
     </div>
 </article>
