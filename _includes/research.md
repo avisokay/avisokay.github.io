@@ -147,7 +147,7 @@
         </div>
 
         <div class="publication-content">
-            <img src="/assets/img/publication_preview/rrds.png" class="publication-image" alt="RRDS Publication">
+            <img src="/assets/img/publication_preview/rrds_search.png" class="publication-image" alt="RRDS Publication">
             <div class="publication-text">
                 <div class="title">Respondent-Driven Sampling: An Overview in the Context of Human Trafficking</div>
                 <div class="author">
