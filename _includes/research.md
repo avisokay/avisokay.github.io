@@ -65,6 +65,22 @@
         <h2 class="bibliography">Working Papers</h2>
 
         <div class="publication-content">
+            <img src="/assets/img/publication_preview/rrds.png" class="publication-image" alt="RRDS Publication">
+            <div class="publication-text">
+                <div class="title">Randomized Recruitment Driven Sampling</div>
+                <div class="author">
+                    <u><strong>Adam Visokay</strong></u>, Laura Boudreau, Rachel M. Heath, Tyler H. McCormick
+                </div>
+                <div class="periodical">
+                    preprint
+                </div>
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2603.00365" class="btn btn-sm btn-outline-primary" target="_blank">arxiv</a>
+                </div>
+            </div>
+        </div>
+
+                <div class="publication-content">
             <img src="/assets/img/publication_preview/bmi.png" class="publication-image" alt="BMI Paper">
             <div class="publication-text">
                 <div class="title">How to measure obesity in public health research? Problems with using BMI for population inference</div>
