@@ -91,7 +91,22 @@
                 </div>
             </div>
         </div>
-            <div class="publication-content">
+        <div class="publication-content">
+            <img src="/assets/img/publication_preview/pdi.png" class="publication-image" alt="PDI Publication">
+            <div class="publication-text">
+                <div class="title">Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks</div>
+                <div class="author">
+                    Navya Mehrotra*, <u><strong>Adam Visokay</strong></u>* and Kristina Gligorić
+                </div>
+                <div class="periodical">
+                    preprint
+                </div>
+                <!-- <div class="links">
+                    <a href="https://arxiv.org/abs/2603.00365" class="btn btn-sm btn-outline-primary" target="_blank">ArXiv</a>
+                </div> -->
+            </div>
+        </div>
+        <div class="publication-content">
             <img src="/assets/img/publication_preview/bmi.png" class="publication-image" alt="BMI Paper">
             <div class="publication-text">
                 <div class="title">How to measure obesity in public health research? Problems with using BMI for population inference</div>
