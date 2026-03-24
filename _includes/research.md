@@ -101,9 +101,9 @@
                 <div class="periodical">
                     preprint
                 </div>
-                <!-- <div class="links">
-                    <a href="https://arxiv.org/abs/2603.00365" class="btn btn-sm btn-outline-primary" target="_blank">ArXiv</a>
-                </div> -->
+                <div class="links">
+                    <a href="https://arxiv.org/abs/2603.21404" class="btn btn-smbtn-outline-primary" target="_blank">ArXiv</a>
+                </div>
             </div>
         </div>
         <div class="publication-content">
