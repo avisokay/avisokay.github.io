@@ -77,6 +77,21 @@
         </div>
         <h2 class="bibliography">Working Papers</h2>
         <div class="publication-content">
+            <img src="/assets/img/publication_preview/data_regime.png" class="publication-image" alt="Data Regime Publication">
+            <div class="publication-text">
+                <div class="title">From Census to Sensors: The Bureaucratic Regime and the Data Revolution</div>
+                <div class="author">
+                    Marion Fourcade, Tyler McCormick, <u><strong>Adam Visokay</strong></u>, Sarah Quinn
+                </div>
+                <div class="periodical">
+                    preprint
+                </div>
+                <div class="links">
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6773159" class="btn btn-sm btn-outline-primary" target="_blank">SSRN</a>
+                </div>
+            </div>
+        </div>
+        <div class="publication-content">
             <img src="/assets/img/publication_preview/rrds.png" class="publication-image" alt="RRDS Publication">
             <div class="publication-text">
                 <div class="title">Randomized Recruitment Driven Sampling</div>
