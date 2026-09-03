@@ -223,7 +223,10 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages"]
+# .nojekyll must be listed explicitly: Jekyll skips dotfiles by default, so
+# without this it never reaches _site and GitHub re-runs its own Jekyll 3.10
+# over the already-built output on gh-pages.
+include: ["_pages", ".nojekyll"]
 exclude:
   - bin/
   - CONTRIBUTING.md
