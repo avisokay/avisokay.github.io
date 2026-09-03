@@ -1,0 +1,60 @@
+/*******************************************************************************
+ * Typography
+ *
+ * al-folio ships no font-family variable: the family comes from the vendored
+ * MDB/Bootstrap stylesheet (Roboto). main.css is linked after those, so these
+ * rules win on source order alone. Georgia and Palatino are system faces, so
+ * nothing here costs a network request.
+ ******************************************************************************/
+
+$serif-body: Georgia, Cambria, "Times New Roman", Times, serif;
+$serif-display: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD",
+  Georgia, serif;
+
+body {
+  font-family: $serif-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif-display;
+  font-weight: 700;
+}
+
+.navbar-brand.title,
+.publications .title,
+.post .profile .more-info {
+  font-family: $serif-display;
+}
+
+// The profile block's contact lines: serif, not al-folio's stock monospace.
+.profile .more-info {
+  font-family: $serif-body;
+}
+
+// Profile contact lines: al-folio sets `display: inline-block` on these <p>s,
+// which runs email and location together on one line. One per line reads better.
+.profile .more-info p {
+  display: block;
+  margin: 0;
+}
+
+// Qualifier appended to a bibliography section heading (e.g. the co-first-author
+// note). Quieter and smaller than the heading it hangs off.
+.publications h2.bibliography .heading-note {
+  font-size: 0.55em;
+  font-weight: 400;
+  color: var(--global-text-color-light);
+}
+
+// Explainer cards: the stock h3 size makes a long title run to four lines in a
+// two-up grid.
+.explainers .card-title {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+}

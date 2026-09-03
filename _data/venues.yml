@@ -1,0 +1,61 @@
+# Venue badge palettes, keyed by the `abbr` field of a _bibliography entry.
+#
+# `url` and `color` are stock al-folio. The five *_color keys are consumed by
+# the patched _layouts/bib.liquid, which emits them as CSS custom properties for
+# _sass/_publications.scss. Any key omitted falls back to --global-theme-color,
+# so a venue absent from this file still renders as a stock badge.
+#
+# Light values are soft tints; dark values are the same hue at low lightness so
+# the badge stays legible against the dark ground.
+
+"SIGSPATIAL 2025":
+  url: https://sigspatial2025.sigspatial.org/
+  color: "#E5E8FA"
+  text_color: "#4550A1"
+  border_color: "#C9CEF2"
+  dark_color: "#292E4C"
+  dark_text_color: "#D0D4F0"
+  dark_border_color: "#454D7A"
+
+"COLM 2024":
+  url: https://colmweb.org/
+  color: "#FFEED4"
+  text_color: "#9E540A"
+  border_color: "#FBD7A2"
+  dark_color: "#4A321D"
+  dark_text_color: "#F3D3A3"
+  dark_border_color: "#7B5430"
+
+"EMNLP 2023":
+  url: https://2023.emnlp.org/
+  color: "#FEE4E1"
+  text_color: "#9F3236"
+  border_color: "#F9C2BE"
+  dark_color: "#4A2628"
+  dark_text_color: "#F4C4C2"
+  dark_border_color: "#7D3C40"
+
+"CHANCE 2023":
+  url: https://www.tandfonline.com/journals/ucha20
+  color: "#DEF7F0"
+  text_color: "#2C7766"
+  border_color: "#B7EBDD"
+  dark_color: "#243D37"
+  dark_text_color: "#C2E4DC"
+  dark_border_color: "#3D675D"
+
+"Working Paper":
+  color: "#ECECEF"
+  text_color: "#55555E"
+  border_color: "#D6D6DC"
+  dark_color: "#303036"
+  dark_text_color: "#D3D3DA"
+  dark_border_color: "#55555E"
+
+"Report 2024":
+  color: "#EDE7F8"
+  text_color: "#5B3E96"
+  border_color: "#D6C9EE"
+  dark_color: "#332A4A"
+  dark_text_color: "#D5C9EF"
+  dark_border_color: "#5B4C82"

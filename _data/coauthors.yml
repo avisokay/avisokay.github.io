@@ -1,0 +1,20 @@
+# Auto-links coauthor names in the bibliography. Keys are lowercase, accent-free
+# last names; each entry matches on first name (or an initial) and supplies a URL.
+"almquist":
+  - firstname: ["Zack", "Zack W.", "Z. W."]
+    url: https://www.zackalmquist.com/
+"blumenstock":
+  - firstname: ["Joshua", "Joshua E.", "J. E."]
+    url: https://www.jblumenstock.com/
+"froehlich":
+  - firstname: ["Jon", "Jon E.", "J. E."]
+    url: https://jonfroehlich.github.io/
+"johfre":
+  - firstname: ["Sasha", "Sasha Shen", "S. S."]
+    url: https://www.sashajohfre.com/
+"mccormick":
+  - firstname: ["Tyler", "Tyler H.", "T. H."]
+    url: https://www.stat.washington.edu/~tylermc/
+"mackenzie":
+  - firstname: ["Don", "D."]
+    url: https://www.ce.washington.edu/facultyfinder/don-mackenzie

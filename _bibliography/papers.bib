@@ -1,0 +1,167 @@
+---
+---
+@string{acl = {Association for Computational Linguistics}}
+@string{asa = {American Statistical Association}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Peer reviewed publications
+%
+% `status` is a local field, not an al-folio one. _pages/research.md filters on
+% it with jekyll-scholar --query to build the three sections, and _config.yml
+% lists it under filtered_bibtex_keywords so it stays out of the Bib popup.
+% A trailing * on a surname marks co-first authorship; bib.liquid superscripts
+% it, and strips it before matching the author against scholar.last_name.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@inproceedings{wang2025streetview,
+  title     = {Street View for Whom? An Initial Examination of Google Street View's Urban Coverage and Socioeconomic Indicators in the US},
+  author    = {Wang, Zeyu and Jian, Yingchao and Visokay, Adam and MacKenzie, Don and Froehlich, Jon E.},
+  booktitle = {Proceedings of the ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems},
+  year      = {2025},
+  abbr      = {SIGSPATIAL 2025},
+  status    = {published},
+  preview   = {gsv.png},
+  selected  = {true},
+  html      = {https://makeabilitylab.cs.washington.edu/media/publications/Wang_StreetViewForWhomAnInitialExaminationOfGoogleStreetViewSUrbanCoverageAndSocioeconomicIndicatorsInTheUs_GeoIndustry2025.pdf},
+  pdf       = {gsv_SIGSPATIAL.pdf},
+  code      = {https://github.com/makeabilitylab/GSVantage},
+  slides    = {gsv_SIGSPATIAL_slides.pdf}
+}
+
+@inproceedings{fan2024narratives,
+  title     = {From Narratives to Numbers: Valid Inference Using Language Model Predictions from Verbal Autopsy Narratives},
+  author    = {Fan*, Shuxian and Visokay*, Adam and Hoffman, Kentaro and Salerno, Stephen and Liu, Li and Leek, Jeffrey T. and McCormick, Tyler H.},
+  booktitle = {Conference on Language Modeling (COLM)},
+  year      = {2024},
+  abbr      = {COLM 2024},
+  status    = {published},
+  preview   = {va.png},
+  selected  = {true},
+  html      = {https://openreview.net/forum?id=QbCHlIqbDJ#discussion},
+  arxiv     = {2404.02438},
+  pdf       = {visokay2024va.pdf},
+  code      = {https://github.com/avisokay/va_nlp/},
+  poster    = {visokay2024va_poster.pdf},
+  slides    = {escience_IPD.pdf},
+  video     = {https://www.youtube.com/watch?v=3iF826EnwRk}
+}
+
+@inproceedings{peskoff2023fedspeak,
+  title     = {GPT Deciphering Fedspeak: Quantifying Dissent Among Hawks and Doves},
+  author    = {Peskoff, Denis and Visokay, Adam and Schulhoff, Sander and Wachspress, Benjamin and Blinder, Alan and Stewart, Brandon},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2023},
+  publisher = acl,
+  year      = {2023},
+  abbr      = {EMNLP 2023},
+  status    = {published},
+  preview   = {gptfed.png},
+  selected  = {true},
+  html      = {https://aclanthology.org/2023.findings-emnlp.434/},
+  arxiv     = {2407.19110},
+  pdf       = {gptfed.pdf},
+  code      = {https://github.com/DenisPeskoff/FedNLP}
+}
+
+@article{kunke2023respondent,
+  title     = {Respondent-Driven Sampling: An Overview in the Context of Human Trafficking},
+  author    = {Kunke, Jessica P. and Visokay, Adam and McCormick, Tyler H.},
+  journal   = {CHANCE},
+  publisher = asa,
+  volume    = {36},
+  number    = {4},
+  pages     = {33--40},
+  year      = {2023},
+  abbr      = {CHANCE 2023},
+  status    = {published},
+  preview   = {rrds_search.png},
+  selected  = {true},
+  doi       = {10.1080/09332480.2023.2290949},
+  html      = {https://www.tandfonline.com/doi/full/10.1080/09332480.2023.2290949},
+  arxiv     = {2309.16160},
+  pdf       = {rrds.pdf}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Working papers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@unpublished{fourcade2026census,
+  title   = {From Census to Sensors: The Bureaucratic Regime and the Data Revolution},
+  author  = {Fourcade, Marion and McCormick, Tyler and Visokay, Adam and Quinn, Sarah},
+  note    = {Preprint},
+  year    = {2026},
+  abbr    = {Working Paper},
+  status  = {working},
+  preview = {data_regime.png},
+  html    = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6773159}
+}
+
+@unpublished{visokay2026rrds,
+  title   = {Randomized Recruitment Driven Sampling},
+  author  = {Visokay, Adam and Boudreau, Laura and Heath, Rachel M. and McCormick, Tyler H.},
+  note    = {Preprint},
+  year    = {2026},
+  abbr    = {Working Paper},
+  status  = {working},
+  preview = {rrds.png},
+  arxiv   = {2603.00365}
+}
+
+@unpublished{mehrotra2026multiperspective,
+  title   = {Multi-Perspective LLM Annotations for Valid Analyses in Subjective Tasks},
+  author  = {Mehrotra*, Navya and Visokay*, Adam and Gligori\'{c}, Kristina},
+  note    = {Preprint},
+  year    = {2026},
+  abbr    = {Working Paper},
+  status  = {working},
+  preview = {pdi.png},
+  arxiv   = {2603.21404}
+}
+
+@unpublished{visokay2025bmi,
+  title   = {How to Measure Obesity in Public Health Research? Problems with Using BMI for Population Inference},
+  author  = {Visokay, Adam and Hoffman, Kentaro and Salerno, Stephen and McCormick, Tyler H. and Johfre, Sasha},
+  note    = {Preprint},
+  year    = {2025},
+  abbr    = {Working Paper},
+  status  = {working},
+  preview = {bmi.png},
+  html    = {https://www.medrxiv.org/content/10.1101/2025.04.01.25325037v1}
+}
+
+@unpublished{visokay2025neighborhoods,
+  title   = {Social Construction of Urban Space: Understanding Neighborhood Boundaries Using Rental Listings},
+  author  = {Visokay*, Adam and Bagley*, Ruth and Kennedy, Ian and Hess, Chris and Crowder, Kyle and Voigt, Rob and Peskoff, Denis},
+  note    = {Preprint},
+  year    = {2025},
+  abbr    = {Working Paper},
+  status  = {working},
+  preview = {humboldt_park.png},
+  arxiv   = {2506.00634}
+}
+
+@unpublished{visokay2025rashomon,
+  title   = {When You Come to a Fork in the Road, Take It: The Rashomon Effect for Social Scientists},
+  author  = {Visokay*, Adam and Hock*, Eddie and Hoffman, Kentaro and McCormick, Tyler H.},
+  note    = {Preprint},
+  year    = {2025},
+  abbr    = {Working Paper},
+  status  = {working},
+  preview = {rashomon.png},
+  html    = {https://osf.io/preprints/socarxiv/8zybt_v2}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Other writings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@techreport{jones2024lfo,
+  title       = {Legal Financial Obligations in Washington's Courts},
+  author      = {Jones, Karl and Beach, Lindsey R. and Gilman, Amanda B. and Wang, Wei and McCurley, Carl and Morande, Brandon and Visokay, Adam},
+  institution = {Washington State Center for Court Research (WSCCR)},
+  year        = {2024},
+  abbr        = {Report 2024},
+  status      = {other},
+  preview     = {lfo.png},
+  pdf         = {https://www.courts.wa.gov/subsite/wsccr/docs/LFO%20WSCCR%20Report%20-%20Published.pdf}
+}
