@@ -1,0 +1,31 @@
+/*******************************************************************************
+ * About (home) page layout
+ ******************************************************************************/
+
+// The profile block is emitted before the page header so that, in normal flow,
+// the float lifts the photo level with the name instead of starting it below.
+// Below the sm breakpoint the float collapses to full width, which would put
+// the photo above the name — so reorder there to keep the name first.
+@media (max-width: 575.98px) {
+  .post-about {
+    display: flex;
+    flex-direction: column;
+
+    .post-header {
+      order: 1;
+    }
+    .profile {
+      order: 2;
+    }
+    article {
+      order: 3;
+    }
+  }
+}
+
+// Contact lines under the photo: al-folio sets `display: inline-block` on these
+// <p>s, which runs email and location together on one line.
+.profile .more-info p {
+  display: block;
+  margin: 0;
+}

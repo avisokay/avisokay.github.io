@@ -36,13 +36,6 @@ h6 {
   font-family: $serif-body;
 }
 
-// Profile contact lines: al-folio sets `display: inline-block` on these <p>s,
-// which runs email and location together on one line. One per line reads better.
-.profile .more-info p {
-  display: block;
-  margin: 0;
-}
-
 // Qualifier appended to a bibliography section heading (e.g. the co-first-author
 // note). Quieter and smaller than the heading it hangs off.
 .publications h2.bibliography .heading-note {

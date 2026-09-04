@@ -2,10 +2,6 @@
 layout: about
 title: Home
 permalink: /
-subtitle: >
-  Bellwether Postdoctoral Scholar,
-  <a href="https://www.berkeley.edu/">University of California, Berkeley</a>
-
 profile:
   align: right
   image: prof_pic.jpg
