@@ -8,6 +8,24 @@
 # Light values are soft tints; dark values are the same hue at low lightness so
 # the badge stays legible against the dark ground.
 
+"AACL 2026":
+  url: https://2026.aaclnet.org/
+  color: "#E3F1FB"
+  text_color: "#1F5F8B"
+  border_color: "#BFDDF3"
+  dark_color: "#1F3547"
+  dark_text_color: "#BFDDF3"
+  dark_border_color: "#35597A"
+
+"NLP+CSS 2026":
+  url: https://sites.google.com/site/nlpandcss/
+  color: "#F1EAF9"
+  text_color: "#6A3F95"
+  border_color: "#DCCBEF"
+  dark_color: "#382B47"
+  dark_text_color: "#DCCBEF"
+  dark_border_color: "#5E4A7A"
+
 "SIGSPATIAL 2025":
   url: https://sigspatial2025.sigspatial.org/
   color: "#E5E8FA"
