@@ -7,8 +7,8 @@ profile:
   image: prof_pic.jpg
   image_circular: false
   more_info: >
-    <p>avisokay@uw.edu</p>
-    <p>Berkeley, CA</p>
+    <p>avisokay@ischool.berkeley.edu</p>
+    <p>Seattle, WA</p>
 
 selected_papers: true # lists entries marked selected={true} in papers.bib
 social: false # the icon row lives in the navbar instead
@@ -24,8 +24,8 @@ International Max Planck Research School for Population, Health and Data Science
 My research explores how to leverage computational methods and statistics to study social phenomena,
 typically motivated by questions in public health, economics, and sociology. I am particularly
 interested in how to perform valid inference using predictions from black box algorithms, and how to
-use AI/ML methods in a way that is both transparent and socially grounded. My work has appeared at
-venues including EMNLP, COLM, and the ACL Workshop on NLP+CSS.
+use language models in a way that is both transparent and socially grounded. My work has appeared at
+venues including EMNLP, COLM, and the ACL.
 
-Contact me at [avisokay@uw.edu](mailto:avisokay@uw.edu), or find me on
+Contact me at [avisokay@ischool.berkeley.edu](mailto:avisokay@ischool.berkeley.edu), or find me on
 [Strava](https://www.strava.com/athletes/9804160) 🏃!
